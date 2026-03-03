@@ -10,7 +10,8 @@ const config: Config = {
   theme: {
   	extend: {
   		fontFamily: {
-  			sans: ['Inter', 'system-ui', 'sans-serif'],
+  			sans: ['var(--font-dm-sans)', 'system-ui', 'sans-serif'],
+  			display: ['var(--font-outfit)', 'system-ui', 'sans-serif'],
   		},
   		colors: {
   			background: 'hsl(var(--background))',
@@ -46,6 +47,20 @@ const config: Config = {
   			surface: {
   				DEFAULT: '#1e3a5f',
   				card: '#0f2035',
+  			},
+  			light: {
+  				DEFAULT: '#f8f5f0',
+  				surface: '#ffffff',
+  				border: '#e5e0d8',
+  			},
+  			'light-text': {
+  				DEFAULT: '#0a1628',
+  				body: '#334155',
+  				muted: '#64748b',
+  			},
+  			'warm-accent': {
+  				DEFAULT: '#D4A845',
+  				dark: '#B8860B',
   			},
   			border: 'hsl(var(--border))',
   			input: 'hsl(var(--input))',
@@ -89,11 +104,21 @@ const config: Config = {
   				to: {
   					height: '0'
   				}
-  			}
+  			},
+  			'reveal-up': {
+  				'0%': { opacity: '0', transform: 'translateY(30px)' },
+  				'100%': { opacity: '1', transform: 'translateY(0)' },
+  			},
+  			'reveal-fade': {
+  				'0%': { opacity: '0' },
+  				'100%': { opacity: '1' },
+  			},
   		},
   		animation: {
   			'accordion-down': 'accordion-down 0.2s ease-out',
-  			'accordion-up': 'accordion-up 0.2s ease-out'
+  			'accordion-up': 'accordion-up 0.2s ease-out',
+  			'reveal-up': 'reveal-up 0.6s ease-out forwards',
+  			'reveal-fade': 'reveal-fade 0.6s ease-out forwards',
   		}
   	}
   },

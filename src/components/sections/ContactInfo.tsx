@@ -2,68 +2,100 @@
 
 import { useTranslations } from "next-intl";
 import { Mail, Phone, Smartphone, MapPin, Building2 } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
+
+function ContactItem({
+  icon: Icon,
+  children,
+  href,
+  label,
+}: {
+  icon: LucideIcon;
+  children: React.ReactNode;
+  href?: string;
+  label?: string;
+}) {
+  const content = (
+    <div className="flex items-start gap-4 rounded-lg p-3 -mx-3 transition-all duration-200 hover:bg-white/[0.04]">
+      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-accent/10 transition-colors duration-200 group-hover:bg-accent/20">
+        <Icon className="h-4 w-4 text-accent" aria-hidden="true" />
+      </div>
+      <div className="text-sm leading-relaxed pt-1.5">{children}</div>
+    </div>
+  );
+
+  if (href) {
+    return (
+      <a
+        href={href}
+        className="group text-white/80 transition-colors hover:text-white"
+        aria-label={label}
+      >
+        {content}
+      </a>
+    );
+  }
+
+  return <div className="group text-white/80">{content}</div>;
+}
 
 export function ContactInfo() {
   const t = useTranslations("contact");
 
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-6">
       <div>
-        <h3 className="text-xl font-semibold text-white mb-2">
+        <h3 className="font-display text-xl font-semibold text-white mb-2">
           {t("infoHeading")}
         </h3>
-        <p className="text-white/60 text-sm leading-relaxed">
+        <p className="text-white/50 text-sm leading-relaxed">
           {t("infoSubheading")}
         </p>
       </div>
 
-      <div className="flex flex-col gap-5">
-        <a
+      {/* Separator */}
+      <div className="h-px bg-gradient-to-r from-accent/20 via-white/10 to-transparent" />
+
+      <div className="flex flex-col gap-1">
+        <ContactItem
+          icon={Mail}
           href="mailto:gerrit.brakelmann@gmail.com"
-          className="group flex items-start gap-3 text-white/80 hover:text-accent transition-colors"
-          aria-label={t("emailLabel")}
+          label={t("emailLabel")}
         >
-          <Mail className="h-5 w-5 mt-0.5 shrink-0 text-accent" />
-          <span className="text-sm">gerrit.brakelmann@gmail.com</span>
-        </a>
+          gerrit.brakelmann@gmail.com
+        </ContactItem>
 
-        <a
+        <ContactItem
+          icon={Phone}
           href="tel:+4928436391"
-          className="group flex items-start gap-3 text-white/80 hover:text-accent transition-colors"
-          aria-label={t("phoneLabel")}
+          label={t("phoneLabel")}
         >
-          <Phone className="h-5 w-5 mt-0.5 shrink-0 text-accent" />
-          <span className="text-sm">+49 2843 6391</span>
-        </a>
+          +49 2843 6391
+        </ContactItem>
 
-        <a
+        <ContactItem
+          icon={Smartphone}
           href="tel:+491743224725"
-          className="group flex items-start gap-3 text-white/80 hover:text-accent transition-colors"
-          aria-label={t("mobileLabel")}
+          label={t("mobileLabel")}
         >
-          <Smartphone className="h-5 w-5 mt-0.5 shrink-0 text-accent" />
-          <span className="text-sm">+49 174 3224725</span>
-        </a>
+          +49 174 3224725
+        </ContactItem>
 
-        <div className="flex items-start gap-3 text-white/80">
-          <MapPin className="h-5 w-5 mt-0.5 shrink-0 text-accent" />
-          <div className="text-sm leading-relaxed">
-            <p>Schwalbenweg 8</p>
-            <p>D-47495 Rheinberg, Germany</p>
-          </div>
-        </div>
+        <ContactItem icon={MapPin}>
+          <p>Schwalbenweg 8</p>
+          <p className="text-white/50">D-47495 Rheinberg, Germany</p>
+        </ContactItem>
 
-        <div className="flex items-start gap-3 text-white/80">
-          <Building2 className="h-5 w-5 mt-0.5 shrink-0 text-accent" />
-          <div className="text-sm leading-relaxed">
-            <p className="font-medium text-white/90">
-              {t("universityLabel")}
-            </p>
+        <ContactItem icon={Building2}>
+          <p className="font-medium text-white/90">
+            {t("universityLabel")}
+          </p>
+          <div className="text-white/50">
             <p>Universität Duisburg-Essen</p>
             <p>IW/ETS, Bismarckstr. 81</p>
             <p>D-47048 Duisburg</p>
           </div>
-        </div>
+        </ContactItem>
       </div>
     </div>
   );

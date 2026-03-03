@@ -6,6 +6,7 @@ import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { StatCounter } from "@/components/shared/StatCounter";
 import { ProjectCard } from "@/components/sections/ProjectCard";
+import { useStaggerReveal } from "@/hooks/useScrollReveal";
 
 type FilterType = "all" | "offshore" | "onshore";
 
@@ -44,6 +45,7 @@ export default function ProjectsSection() {
   const t = useTranslations("projects");
   const tStats = useTranslations("stats");
   const [activeFilter, setActiveFilter] = useState<FilterType>("all");
+  const gridRef = useStaggerReveal<HTMLDivElement>();
 
   const filteredProjects =
     activeFilter === "all"
@@ -53,16 +55,16 @@ export default function ProjectsSection() {
   return (
     <section
       id="projects"
-      className="bg-surface-card px-4 py-20 md:py-28"
+      className="bg-light px-4 py-20 md:py-28"
       aria-label={t("sectionLabel")}
     >
       {/* Stats bar */}
-      <div className="bg-primary/60 border-y border-accent/10 py-10 mb-16 -mx-4 px-4">
+      <div className="bg-primary/5 border-y border-light-border py-10 mb-16 -mx-4 px-4">
         <div className="mx-auto max-w-7xl grid grid-cols-2 gap-8 md:grid-cols-4">
-          <StatCounter value={110} suffix="+" label={tStats("projectsLabel")} />
-          <StatCounter value={40} suffix="+" label={tStats("offshoreLabel")} />
-          <StatCounter value={70} suffix="+" label={tStats("onshoreLabel")} />
-          <StatCounter value={50} suffix="+" label={tStats("yearsLabel")} />
+          <StatCounter value={110} suffix="+" label={tStats("projectsLabel")} variant="light" />
+          <StatCounter value={40} suffix="+" label={tStats("offshoreLabel")} variant="light" />
+          <StatCounter value={70} suffix="+" label={tStats("onshoreLabel")} variant="light" />
+          <StatCounter value={50} suffix="+" label={tStats("yearsLabel")} variant="light" />
         </div>
       </div>
 
@@ -71,6 +73,7 @@ export default function ProjectsSection() {
           label={t("sectionLabel")}
           heading={t("heading")}
           subheading={t("subheading")}
+          variant="light"
         />
 
         {/* Filter tabs */}
@@ -79,37 +82,38 @@ export default function ProjectsSection() {
             value={activeFilter}
             onValueChange={(v) => setActiveFilter(v as FilterType)}
           >
-            <TabsList className="bg-primary/60 border border-accent/10">
-              <TabsTrigger value="all">{t("filterAll")}</TabsTrigger>
-              <TabsTrigger value="offshore">{t("filterOffshore")}</TabsTrigger>
-              <TabsTrigger value="onshore">{t("filterOnshore")}</TabsTrigger>
+            <TabsList className="bg-light-border/50 border border-light-border">
+              <TabsTrigger value="all" className="data-[state=active]:bg-light-surface data-[state=active]:text-light-text data-[state=active]:shadow-sm">{t("filterAll")}</TabsTrigger>
+              <TabsTrigger value="offshore" className="data-[state=active]:bg-light-surface data-[state=active]:text-light-text data-[state=active]:shadow-sm">{t("filterOffshore")}</TabsTrigger>
+              <TabsTrigger value="onshore" className="data-[state=active]:bg-light-surface data-[state=active]:text-light-text data-[state=active]:shadow-sm">{t("filterOnshore")}</TabsTrigger>
             </TabsList>
           </Tabs>
         </div>
 
         {/* Project cards grid */}
         {filteredProjects.length === 0 ? (
-          <p className="text-center text-white/50">{t("emptyState")}</p>
+          <p className="text-center text-light-text-muted">{t("emptyState")}</p>
         ) : (
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+          <div ref={gridRef} className="grid grid-cols-1 gap-6 sm:grid-cols-2">
             {filteredProjects.map((project) => (
-              <ProjectCard
-                key={project.key}
-                title={t(`items.${project.key}.title`)}
-                description={t(`items.${project.key}.description`)}
-                tech={t(`items.${project.key}.tech`)}
-                techLabel={t("keyTech")}
-                category={project.category}
-                categoryLabel={t(project.category === "offshore" ? "filterOffshore" : "filterOnshore")}
-                imageUrl={project.imageUrl}
-                imageAlt={project.imageAlt}
-              />
+              <div key={project.key} className="reveal-hidden">
+                <ProjectCard
+                  title={t(`items.${project.key}.title`)}
+                  description={t(`items.${project.key}.description`)}
+                  tech={t(`items.${project.key}.tech`)}
+                  techLabel={t("keyTech")}
+                  category={project.category}
+                  categoryLabel={t(project.category === "offshore" ? "filterOffshore" : "filterOnshore")}
+                  imageUrl={project.imageUrl}
+                  imageAlt={project.imageAlt}
+                />
+              </div>
             ))}
           </div>
         )}
 
         {/* Confidentiality note */}
-        <p className="mt-10 text-center text-sm text-white/40 italic">
+        <p className="mt-10 text-center text-sm text-light-text-muted italic">
           {t("confidentialityNote")}
         </p>
       </div>

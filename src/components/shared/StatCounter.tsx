@@ -7,6 +7,7 @@ interface StatCounterProps {
   label: string;
   prefix?: string;
   suffix?: string;
+  variant?: "dark" | "light";
 }
 
 function easeOutCubic(t: number): number {
@@ -18,7 +19,7 @@ function prefersReducedMotion(): boolean {
   return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 }
 
-export function StatCounter({ value, label, prefix = "", suffix = "" }: StatCounterProps) {
+export function StatCounter({ value, label, prefix = "", suffix = "", variant = "dark" }: StatCounterProps) {
   const [displayValue, setDisplayValue] = useState(() =>
     prefersReducedMotion() ? value : 0
   );
@@ -59,14 +60,17 @@ export function StatCounter({ value, label, prefix = "", suffix = "" }: StatCoun
     return () => observer.disconnect();
   }, [value, hasAnimated]);
 
+  const valueColor = variant === "light" ? "text-warm-accent-dark" : "text-white";
+  const labelColor = variant === "light" ? "text-light-text-muted" : "text-white/70";
+
   return (
     <div ref={ref} className="flex flex-col items-center text-center">
-      <span className="text-4xl font-bold text-accent" aria-label={`${prefix}${value}${suffix}`}>
+      <span className={`font-display text-4xl font-bold ${valueColor}`} aria-label={`${prefix}${value}${suffix}`}>
         {prefix}
         {displayValue}
         {suffix}
       </span>
-      <span className="mt-1 text-sm text-white/70">{label}</span>
+      <span className={`mt-1 text-sm ${labelColor}`}>{label}</span>
     </div>
   );
 }

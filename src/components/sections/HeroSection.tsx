@@ -48,7 +48,7 @@ export default function HeroSection() {
             onError={() => setBgError(true)}
           />
           {/* Dark gradient overlay for text readability */}
-          <div className="absolute inset-0 bg-gradient-to-b from-primary/85 via-primary/70 to-primary/90" />
+          <div className="absolute inset-0 bg-gradient-to-b from-primary/75 via-primary/55 to-primary/80" />
         </div>
       )}
       {/* Content */}
@@ -59,7 +59,7 @@ export default function HeroSection() {
         </span>
 
         {/* Main title — company name */}
-        <h1 className="text-4xl font-bold uppercase leading-tight text-white md:text-5xl lg:text-6xl">
+        <h1 className="font-display text-4xl font-bold uppercase leading-tight text-white md:text-5xl lg:text-6xl">
           <span className="text-accent">BCC </span>
           <span className="text-white">Cable Consulting</span>
         </h1>
@@ -77,9 +77,10 @@ export default function HeroSection() {
         {/* CTA buttons */}
         <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
           <Button
+            variant="outline"
             size="lg"
             onClick={() => scrollTo("contact")}
-            className="bg-accent px-8 text-base font-semibold text-primary hover:bg-accent/90"
+            className="border-white/30 bg-transparent px-8 text-base font-semibold text-white hover:bg-white/10 hover:text-white"
           >
             {t("cta")}
           </Button>

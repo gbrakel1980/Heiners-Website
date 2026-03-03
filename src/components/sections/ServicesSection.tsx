@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { ServiceCard } from "@/components/sections/ServiceCard";
+import { useStaggerReveal } from "@/hooks/useScrollReveal";
 import type { LucideIcon } from "lucide-react";
 
 const SERVICE_KEYS = [
@@ -36,6 +37,7 @@ const ICON_MAP: Record<(typeof SERVICE_KEYS)[number], LucideIcon> = {
 
 export default function ServicesSection() {
   const t = useTranslations("services");
+  const gridRef = useStaggerReveal<HTMLDivElement>();
 
   return (
     <section
@@ -46,14 +48,15 @@ export default function ServicesSection() {
       <div className="mx-auto max-w-7xl">
         <SectionHeading label={t("sectionLabel")} heading={t("heading")} />
 
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div ref={gridRef} className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {SERVICE_KEYS.map((key) => (
-            <ServiceCard
-              key={key}
-              icon={ICON_MAP[key]}
-              title={t(`items.${key}.title`)}
-              description={t(`items.${key}.description`)}
-            />
+            <div key={key} className="reveal-hidden">
+              <ServiceCard
+                icon={ICON_MAP[key]}
+                title={t(`items.${key}.title`)}
+                description={t(`items.${key}.description`)}
+              />
+            </div>
           ))}
         </div>
       </div>

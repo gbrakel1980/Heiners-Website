@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { CollaborationCard } from "@/components/sections/CollaborationCard";
 import { Badge } from "@/components/ui/badge";
+import { useStaggerReveal } from "@/hooks/useScrollReveal";
 import {
   Building2,
   Award,
@@ -36,6 +37,7 @@ const ORGANIZATION_KEYS = ["ieee", "vde", "cigre", "uniDue", "rwth"] as const;
 
 export default function TestimonialsSection() {
   const t = useTranslations("testimonials");
+  const gridRef = useStaggerReveal<HTMLDivElement>();
 
   return (
     <section
@@ -69,16 +71,17 @@ export default function TestimonialsSection() {
             ))}
           </div>
 
-          {/* Desktop: 3-column grid */}
-          <div className="hidden gap-6 md:grid md:grid-cols-2 lg:grid-cols-3">
+          {/* Desktop: 3-column grid with stagger animation */}
+          <div ref={gridRef} className="hidden gap-6 md:grid md:grid-cols-2 lg:grid-cols-3">
             {COLLABORATION_KEYS.map((key) => (
-              <CollaborationCard
-                key={key}
-                organization={t(`items.${key}.organization`)}
-                description={t(`items.${key}.description`)}
-                type={t(`items.${key}.type`)}
-                icon={COLLABORATION_ICONS[key]}
-              />
+              <div key={key} className="reveal-hidden">
+                <CollaborationCard
+                  organization={t(`items.${key}.organization`)}
+                  description={t(`items.${key}.description`)}
+                  type={t(`items.${key}.type`)}
+                  icon={COLLABORATION_ICONS[key]}
+                />
+              </div>
             ))}
           </div>
         </div>

@@ -17,8 +17,10 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
 } from "@/components/ui/form";
+
+const inputClassName =
+  "bg-white/[0.04] border-white/[0.08] text-white placeholder:text-white/25 transition-all duration-300 focus-visible:ring-1 focus-visible:ring-accent/50 focus-visible:border-accent/30 focus-visible:bg-white/[0.06] hover:border-white/15 hover:bg-white/[0.06]";
 
 export function ContactForm() {
   const t = useTranslations("contact");
@@ -71,10 +73,8 @@ export function ContactForm() {
     }
   }
 
-  // Map Zod error codes to translated messages
   function getFieldError(fieldError: { message?: string } | undefined) {
     if (!fieldError?.message) return undefined;
-    // The Zod schema stores translation keys as error messages
     try {
       return t(fieldError.message);
     } catch {
@@ -86,7 +86,7 @@ export function ContactForm() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="space-y-5"
+        className="space-y-6"
         noValidate
       >
         {/* Honeypot field - hidden from users, traps bots */}
@@ -102,19 +102,19 @@ export function ContactForm() {
           />
         </div>
 
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
           <FormField
             control={form.control}
             name="name"
             render={({ field, fieldState }) => (
               <FormItem>
-                <FormLabel className="text-white/80">
+                <FormLabel className="text-sm font-medium text-white/70">
                   {t("fields.name")} <span className="text-accent">*</span>
                 </FormLabel>
                 <FormControl>
                   <Input
                     placeholder={t("placeholders.name")}
-                    className="bg-surface-card border-white/10 text-white placeholder:text-white/30 focus-visible:ring-accent"
+                    className={inputClassName}
                     {...field}
                   />
                 </FormControl>
@@ -132,13 +132,13 @@ export function ContactForm() {
             name="company"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-white/80">
+                <FormLabel className="text-sm font-medium text-white/70">
                   {t("fields.company")}
                 </FormLabel>
                 <FormControl>
                   <Input
                     placeholder={t("placeholders.company")}
-                    className="bg-surface-card border-white/10 text-white placeholder:text-white/30 focus-visible:ring-accent"
+                    className={inputClassName}
                     {...field}
                   />
                 </FormControl>
@@ -152,14 +152,14 @@ export function ContactForm() {
           name="email"
           render={({ field, fieldState }) => (
             <FormItem>
-              <FormLabel className="text-white/80">
+              <FormLabel className="text-sm font-medium text-white/70">
                 {t("fields.email")} <span className="text-accent">*</span>
               </FormLabel>
               <FormControl>
                 <Input
                   type="email"
                   placeholder={t("placeholders.email")}
-                  className="bg-surface-card border-white/10 text-white placeholder:text-white/30 focus-visible:ring-accent"
+                  className={inputClassName}
                   {...field}
                 />
               </FormControl>
@@ -177,13 +177,13 @@ export function ContactForm() {
           name="subject"
           render={({ field, fieldState }) => (
             <FormItem>
-              <FormLabel className="text-white/80">
+              <FormLabel className="text-sm font-medium text-white/70">
                 {t("fields.subject")} <span className="text-accent">*</span>
               </FormLabel>
               <FormControl>
                 <Input
                   placeholder={t("placeholders.subject")}
-                  className="bg-surface-card border-white/10 text-white placeholder:text-white/30 focus-visible:ring-accent"
+                  className={inputClassName}
                   {...field}
                 />
               </FormControl>
@@ -201,14 +201,14 @@ export function ContactForm() {
           name="message"
           render={({ field, fieldState }) => (
             <FormItem>
-              <FormLabel className="text-white/80">
+              <FormLabel className="text-sm font-medium text-white/70">
                 {t("fields.message")} <span className="text-accent">*</span>
               </FormLabel>
               <FormControl>
                 <Textarea
                   placeholder={t("placeholders.message")}
                   rows={6}
-                  className="bg-surface-card border-white/10 text-white placeholder:text-white/30 focus-visible:ring-accent resize-none"
+                  className={`${inputClassName} resize-none`}
                   {...field}
                 />
               </FormControl>
@@ -221,12 +221,12 @@ export function ContactForm() {
                   <span />
                 )}
                 <span
-                  className={`text-xs ${
+                  className={`text-xs tabular-nums ${
                     messageLength > 2000
                       ? "text-destructive"
                       : messageLength > 1800
                         ? "text-yellow-400"
-                        : "text-white/40"
+                        : "text-white/30"
                   }`}
                 >
                   {messageLength}/2000
@@ -239,19 +239,23 @@ export function ContactForm() {
         <Button
           type="submit"
           disabled={isSubmitting}
-          className="w-full bg-accent text-primary font-semibold hover:bg-accent/90 h-11 text-base"
+          className="group relative w-full overflow-hidden bg-accent text-primary font-semibold hover:bg-accent/90 h-12 text-base transition-all duration-300 hover:shadow-lg hover:shadow-accent/20"
         >
-          {isSubmitting ? (
-            <>
-              <Loader2 className="h-4 w-4 animate-spin" />
-              {t("submitting")}
-            </>
-          ) : (
-            <>
-              <Send className="h-4 w-4" />
-              {t("submitButton")}
-            </>
-          )}
+          {/* Subtle shimmer effect on hover */}
+          <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
+          <span className="relative flex items-center justify-center gap-2">
+            {isSubmitting ? (
+              <>
+                <Loader2 className="h-4 w-4 animate-spin" />
+                {t("submitting")}
+              </>
+            ) : (
+              <>
+                <Send className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
+                {t("submitButton")}
+              </>
+            )}
+          </span>
         </Button>
       </form>
     </Form>
