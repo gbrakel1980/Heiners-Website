@@ -1,0 +1,297 @@
+{
+  "nav": {
+    "about": "About",
+    "services": "Services",
+    "projects": "Projects",
+    "testimonials": "Network",
+    "publications": "Publications",
+    "contact": "Contact",
+    "logoText": "BCC Cable Consulting"
+  },
+  "footer": {
+    "tagline": "Expert consulting in high-voltage cable systems and offshore wind energy.",
+    "copyright": "© 2026 BCC Cable Consulting — Prof. Dr.-Ing. Heinrich Brakelmann. All rights reserved.",
+    "contact": "Contact",
+    "email": "gerrit.brakelmann@gmail.com",
+    "location": "Rheinberg, Germany"
+  },
+  "meta": {
+    "title": "BCC Cable Consulting — Prof. Dr.-Ing. Heinrich Brakelmann",
+    "description": "Expert consulting in high-voltage cable systems, offshore wind energy, and power cable engineering. 110+ projects. 258 publications."
+  },
+  "hero": {
+    "titleLine1": "Prof. Dr.-Ing. em.",
+    "titleLine2": "Heinrich Brakelmann",
+    "subtitle": "Expert Consulting in High-Voltage Cable Systems & Offshore Wind Energy",
+    "tagline": "50+ years of pioneering research. 110+ projects delivered. IEEE Prize Paper Award 2019.",
+    "cta": "Get in Touch",
+    "ctaSecondary": "Explore Services"
+  },
+  "stats": {
+    "projects": "110+",
+    "projectsLabel": "Projects Completed",
+    "offshore": "40+",
+    "offshoreLabel": "Offshore Wind Farms",
+    "onshore": "70+",
+    "onshoreLabel": "Onshore Projects",
+    "publications": "258",
+    "publicationsLabel": "Publications",
+    "yearsLabel": "Years of Expertise"
+  },
+  "about": {
+    "sectionLabel": "About",
+    "heading": "A Lifetime of Innovation in Cable Engineering",
+    "lead": "Prof. Dr.-Ing. habil. Heinrich Brakelmann is one of the world's foremost authorities on high-voltage power cable systems — combining five decades of academic research with hands-on delivery of more than 110 major energy infrastructure projects.",
+    "bio1": "He studied electrical engineering at RWTH Aachen (Diploma 1971) and completed his doctoral thesis on circuit breakers in 1973. He then joined Felten & Guilleaume Energietechnik AG in Cologne, leading an R&D unit focused on high-power cable technology — a role that grounded his theoretical expertise in large-scale industrial practice.",
+    "bio2": "From the 1980s onward, Brakelmann held the Chair for Power Cable Technology at the University of Duisburg-Essen, where he served as Professor at the Institute for Energy Transport and Storage (IW/ETS) for over two decades. Now Professor emeritus, he continues to publish and consult at the frontier of the field.",
+    "bio3": "Through BCC Cable Consulting, he brings this unmatched combination of academic depth and project experience to clients worldwide — from offshore wind farm developers to national grid operators.",
+    "awardsHeading": "Awards & Recognition",
+    "award1Title": "IEEE PES Prize Paper Award 2019",
+    "award1Desc": "For \"Rating of Underground Power Cables with Boundary Temperature Restrictions\" — IEEE Transactions on Power Delivery",
+    "award2Title": "ETG Award 1982",
+    "award2Desc": "VDE/ETG Award for outstanding contributions to power cable technology",
+    "award3Title": "CIGRE Working Group Contributor",
+    "award3Desc": "Long-standing contributions to CIGRE Working Groups B1 on cable systems",
+    "affiliationHeading": "Affiliation",
+    "affiliation": "Professor emeritus, Institute for Energy Transport and Storage (IW/ETS), Faculty of Engineering Sciences, University of Duisburg-Essen"
+  },
+  "projects": {
+    "sectionLabel": "Projects",
+    "heading": "110+ Projects Delivered",
+    "subheading": "A selection of representative engagements across offshore and onshore cable systems.",
+    "filterAll": "All",
+    "filterOffshore": "Offshore",
+    "filterOnshore": "Onshore",
+    "emptyState": "No projects in this category.",
+    "confidentialityNote": "Project details available upon request — client confidentiality applies.",
+    "keyTech": "Key Technology",
+    "items": {
+      "northSeaOffshore": {
+        "title": "North Sea Offshore Wind Farm, 2019",
+        "description": "End-to-end inpark grid layout for a 400 MW offshore wind farm in the North Sea. Included cable routing, cross-section selection, and connection to the offshore substation.",
+        "tech": "Inpark Grid Layout & Cable Sizing"
+      },
+      "onshoreHV": {
+        "title": "Inland HV Transmission Corridor, 2021",
+        "description": "Integration of a 220 kV underground cable system into an existing overhead transmission corridor. Detailed thermal analysis and system compatibility study.",
+        "tech": "HV Cable System Integration"
+      },
+      "submarineThermal": {
+        "title": "Deepwater Export Cable Study, 2018",
+        "description": "Thermal rating and transient load analysis for a 100 km submarine export cable connecting an offshore wind farm to the mainland grid.",
+        "tech": "Submarine Cable Thermal Analysis"
+      },
+      "magneticShielding": {
+        "title": "Urban Underground Cable Route, 2022",
+        "description": "EMF impact assessment and magnetic shielding design for a high-current cable route passing beneath a densely populated urban area.",
+        "tech": "Magnetic Shielding & EMF Analysis"
+      }
+    }
+  },
+  "contact": {
+    "sectionLabel": "Contact",
+    "heading": "Get in Touch",
+    "subheading": "Have a project or inquiry? Send us a message and we will get back to you promptly.",
+    "infoHeading": "Direct Contact",
+    "infoSubheading": "You can also reach Prof. Brakelmann directly via the contact details below.",
+    "emailLabel": "Send email",
+    "phoneLabel": "Call office phone",
+    "mobileLabel": "Call mobile phone",
+    "universityLabel": "University Affiliation",
+    "fields": {
+      "name": "Full Name",
+      "company": "Company / Organization",
+      "email": "Email Address",
+      "subject": "Subject",
+      "message": "Message"
+    },
+    "placeholders": {
+      "name": "Your full name",
+      "company": "Your company (optional)",
+      "email": "your.email@example.com",
+      "subject": "How can we help you?",
+      "message": "Describe your project or inquiry in detail (min. 20 characters)..."
+    },
+    "validation": {
+      "nameMin": "Name must be at least 2 characters.",
+      "emailInvalid": "Please enter a valid email address.",
+      "subjectMin": "Subject must be at least 5 characters.",
+      "messageMin": "Message must be at least 20 characters.",
+      "messageMax": "Message must not exceed 2000 characters."
+    },
+    "submitButton": "Send Message",
+    "submitting": "Sending...",
+    "successMessage": "Your message has been sent successfully. We will get back to you shortly.",
+    "errorGeneric": "Something went wrong. Please try again or contact us directly via email.",
+    "errorRateLimit": "Too many submissions. Please try again in an hour.",
+    "errorServiceDown": "Our email service is temporarily unavailable. Please contact us directly at gerrit.brakelmann@gmail.com."
+  },
+  "testimonials": {
+    "sectionLabel": "Professional Network",
+    "heading": "Professional Network",
+    "subheading": "Organizations and institutions Prof. Brakelmann has collaborated with throughout his career.",
+    "trustedByHeading": "Trusted By",
+    "items": {
+      "ieee": {
+        "organization": "IEEE Power & Energy Society",
+        "description": "Prize Paper Award 2019 for \"Rating of Underground Power Cables with Boundary Temperature Restrictions\" in IEEE Transactions on Power Delivery.",
+        "type": "Award"
+      },
+      "cigre": {
+        "organization": "CIGRE",
+        "description": "Long-standing member of Working Group B1, contributing to international standards and technical brochures on high-voltage cable systems.",
+        "type": "Working Group"
+      },
+      "vdeEtg": {
+        "organization": "VDE / ETG",
+        "description": "ETG Award 1982 for outstanding contributions to power cable technology. Active member of VDE technical committees.",
+        "type": "Award & Committee"
+      },
+      "uniDue": {
+        "organization": "University of Duisburg-Essen",
+        "description": "Professor and Chair of Power Cable Technology at the Institute for Energy Transport and Storage (IW/ETS). Now Professor emeritus.",
+        "type": "Academic Chair"
+      },
+      "tsos": {
+        "organization": "Transmission System Operators",
+        "description": "Consulting engagements with major European TSOs on cable rating, thermal analysis, and system integration for grid expansion projects.",
+        "type": "Consulting"
+      },
+      "windDevelopers": {
+        "organization": "Offshore Wind Developers",
+        "description": "Inpark grid layout design and cable sizing for 40+ offshore wind farms across the North Sea and Baltic Sea regions.",
+        "type": "Consulting"
+      }
+    },
+    "organizations": {
+      "ieee": "IEEE Power & Energy Society",
+      "vde": "VDE / ETG",
+      "cigre": "CIGRE Working Group B1",
+      "uniDue": "University of Duisburg-Essen",
+      "rwth": "RWTH Aachen University"
+    }
+  },
+  "publications": {
+    "sectionLabel": "Publications & Awards",
+    "heading": "258 Publications (1971\u20132023)",
+    "subheading": "Five decades of research advancing the science of power cable engineering.",
+    "awardsHeading": "Awards & Recognition",
+    "awards": {
+      "ieee": {
+        "title": "IEEE PES Prize Paper Award 2019",
+        "description": "For publication #234: \"Rating of Underground Power Cables with Boundary Temperature Restrictions\" \u2014 IEEE Transactions on Power Delivery, Aug 2018, pp. 1895\u20131902"
+      },
+      "etg": {
+        "title": "ETG Award (VDE/ETG), 1982",
+        "description": "For outstanding contributions to power cable technologies"
+      }
+    },
+    "statLine": "258 Publications (1971–2023)",
+    "highlightsHeading": "Selected Publications",
+    "items": {
+      "p234": {
+        "number": "#234",
+        "title": "Rating of Underground Power Cables with Boundary Temperature Restrictions",
+        "journal": "IEEE Transactions on Power Delivery, Aug 2018, pp. 1895\u20131902",
+
+        "badge": "IEEE PES Prize Paper 2019",
+        "url": "https://ieeexplore.ieee.org/document/8309265"
+      },
+      "p251": {
+        "number": "#251",
+        "title": "A new method for analyzing complex cable arrangements",
+        "journal": "IEEE Transactions on Power Delivery, vol. 37, June 2022, pp. 1608\u20131616",
+
+        "badge": "",
+        "url": "https://ieeexplore.ieee.org/document/9543595"
+      },
+      "p248": {
+        "number": "#248",
+        "title": "Transient Thermal Response of Power Cables with temperature-dependent losses",
+        "journal": "IEEE Transactions on Power Delivery, Sept 2020",
+
+        "badge": "",
+        "url": "https://ieeexplore.ieee.org/document/9098049"
+      },
+      "p253": {
+        "number": "#253",
+        "title": "Fundamentals of the thermal analysis of complex arrangements of underground heat sources",
+        "journal": "Energies, 2021 (Open Access)",
+
+        "badge": "",
+        "url": "https://doi.org/10.3390/en14206813"
+      },
+      "p244": {
+        "number": "#244",
+        "title": "Erdkabel f\u00fcr den Netzausbau",
+        "titleTranslation": "(Underground Cables for Grid Expansion)",
+        "journal": "Book \u2014 BoD-Verlag, 2019 (co-author L.J. Jarass)",
+
+        "badge": "",
+        "url": ""
+      },
+      "p235": {
+        "number": "#235",
+        "title": "Design aspects of HVDC cable installations",
+        "journal": "IEEE Transactions on Power Delivery, Oct 2018",
+
+        "badge": "",
+        "url": "https://ieeexplore.ieee.org/document/8290718"
+      },
+      "p32": {
+        "number": "#32",
+        "title": "Belastbarkeiten der Energiekabel",
+        "titleTranslation": "(Current Ratings of Power Cables)",
+        "journal": "Book \u2014 VDE-Verlag, 1985",
+
+        "badge": "",
+        "url": ""
+      },
+      "p27": {
+        "number": "#27",
+        "title": "Physical principles and calculation methods of moisture and heat transfer in cable trenches",
+        "journal": "etz-Report 19, VDE-Verlag, 1984",
+
+        "badge": "",
+        "url": ""
+      }
+    },
+    "downloadPdf": "Download Full Publication List (PDF)",
+    "viewOnIeee": "View all on IEEE Xplore",
+    "ieeeUrl": "https://ieeexplore.ieee.org/author/37276293400"
+  },
+  "services": {
+    "sectionLabel": "Services",
+    "heading": "Our Areas of Expertise",
+    "items": {
+      "hvCables": {
+        "title": "High-Voltage Cable Systems",
+        "description": "Construction, optimization, and system integration of high-voltage cable systems. From design through commissioning, we deliver reliable solutions for onshore and submarine power transmission."
+      },
+      "offshore": {
+        "title": "Offshore Wind Park Cabling",
+        "description": "Inpark grid layout and connection to the transmission grid for offshore wind farms. Comprehensive cabling concepts that optimize cost, reliability, and power delivery."
+      },
+      "thermal": {
+        "title": "Thermal Analysis & Cable Rating",
+        "description": "Transient and stationary current ratings, heating behavior of submarine and underground cables. Precise thermal modeling ensures safe operation at maximum capacity."
+      },
+      "emf": {
+        "title": "EMF & Magnetic Shielding",
+        "description": "Analysis of electric, magnetic, and thermal fields around cable systems. Expert assessment of EMF exposure and design of effective shielding measures."
+      },
+      "transmission": {
+        "title": "Transmission Behavior Analysis",
+        "description": "Transient and stationary behavior analysis of cables and overhead lines. Detailed modeling of switching surges, lightning impacts, and steady-state performance."
+      },
+      "layout": {
+        "title": "Wind Park Cable Layout Optimization",
+        "description": "Optimized cabling layout with respect to technology, economics, and reliability. Minimizing cable lengths and losses while maximizing energy yield."
+      },
+      "monitoring": {
+        "title": "Monitoring & Forecasting Systems",
+        "description": "Intelligent monitoring with predictive forecasting for cable infrastructure. Real-time condition assessment and proactive maintenance planning for critical assets."
+      }
+    }
+  }
+}

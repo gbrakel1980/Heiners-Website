@@ -1,6 +1,6 @@
 # PROJ-4: Projects & Portfolio Section
 
-## Status: In Progress
+## Status: In Review
 **Created:** 2026-02-25
 **Last Updated:** 2026-02-25
 
@@ -129,7 +129,91 @@ No new packages required. All needed components are already installed:
 - `next-intl`: already configured
 
 ## QA Test Results
-_To be added by /qa_
+
+**Tested by:** QA Engineer (Claude)
+**Date:** 2026-03-02
+**Build status:** PASS (Next.js 16.1.1 Turbopack, clean compile)
+
+### Acceptance Criteria Results
+
+| # | Criterion | Result | Notes |
+|---|-----------|--------|-------|
+| AC-1 | Statistics bar displays 110+, 40+, 70+, 50+ with bilingual labels | PASS (after fix) | "Years of Expertise" was hardcoded in English -- fixed during QA by adding `stats.yearsLabel` key to both locale files. All four counters now use i18n keys. |
+| AC-2 | At least 4 project cards: offshore grid, onshore HV, submarine thermal, magnetic shielding | PASS | Four cards defined in PROJECTS array matching all required topics. |
+| AC-3 | Each card shows: badge, title, description (2-3 sentences), key technology | PASS | ProjectCard renders Badge, CardTitle, description paragraph, and tech label/value. |
+| AC-4 | Filter tabs: All / Offshore / Onshore | PASS | shadcn/ui Tabs with useState filter. Filter logic correctly filters by `category` field. |
+| AC-5 | Section heading and all content bilingual (EN/DE) | FAIL -- see BUG-2, BUG-3 | Badge text and image alt text are hardcoded in English. |
+| AC-6 | Responsive: 2-col desktop, 1-col mobile | PASS | Grid uses `grid-cols-1 sm:grid-cols-2`. Stats bar uses `grid-cols-2 md:grid-cols-4`. |
+| AC-7 | Confidentiality note displayed | PASS | `t("confidentialityNote")` rendered, both EN and DE translations present. |
+
+### Edge Case Results
+
+| # | Edge Case | Result | Notes |
+|---|-----------|--------|-------|
+| EC-1 | Filter yields 0 results shows empty state | PASS | Conditional render shows `t("emptyState")` when `filteredProjects.length === 0`. Cannot happen with current data but code handles it. |
+| EC-2 | Inconsistent card description length | PASS (partial) | Cards use `h-full` and `flex-1` on description for consistent height. No "read more" truncation implemented, but descriptions are currently similar length so this is acceptable. |
+| EC-3 | Confidential project names | PASS | All project titles use generic descriptive names with year, no client names. |
+
+### Bugs Found
+
+**BUG-1 (Medium, FIXED): "Years of Expertise" hardcoded in English**
+- File: `src/components/sections/ProjectsSection.tsx` line 65
+- Was: `label="Years of Expertise"` (hardcoded string)
+- Fix applied: Changed to `label={tStats("yearsLabel")}` and added `stats.yearsLabel` to both `messages/en.json` ("Years of Expertise") and `messages/de.json` ("Jahre Expertise").
+- Status: RESOLVED
+
+**BUG-2 (Medium, OPEN): Badge text "Offshore"/"Onshore" hardcoded in English**
+- File: `src/components/sections/ProjectCard.tsx` line 44
+- Code: `{category === "offshore" ? "Offshore" : "Onshore"}`
+- Impact: Badge text will not translate when the site is viewed in German. The words "Offshore" and "Onshore" happen to be the same in German usage, but this bypasses the i18n system and sets a bad precedent. Should use i18n keys like `projects.filterOffshore` / `projects.filterOnshore` or dedicated badge keys.
+- Severity: Medium (functional i18n gap, though visually acceptable in DE)
+- Priority: P2
+
+**BUG-3 (Low, OPEN): Image alt text hardcoded in English**
+- File: `src/components/sections/ProjectsSection.tsx` lines 18, 25, 32, 39
+- Code: `imageAlt: "Offshore wind turbines in the North Sea"` (etc.)
+- Impact: Screen readers will read English alt text to German-speaking users. Alt text should be in i18n message files for proper bilingual accessibility.
+- Severity: Low (accessibility impact for DE screen reader users)
+- Priority: P3
+
+**BUG-4 (Low, OPEN): Stats bar labels differ from acceptance criteria wording**
+- The AC specifies: "110+ Projects Completed" / "110+ Projekte abgeschlossen"
+- Actual EN: "Projects Completed" (matches). Actual DE: "Abgeschlossene Projekte" (close but reworded).
+- The AC specifies: "40+ Offshore Wind Farm Projects" / "40+ Offshore-Windpark-Projekte"
+- Actual EN: "Offshore Wind Farms". Actual DE: "Offshore-Windparks" (shortened, missing "Projects/Projekte").
+- Severity: Low (cosmetic mismatch with spec, content is still meaningful)
+- Priority: P3
+
+### Security Audit (Red-Team)
+
+| Check | Result | Notes |
+|-------|--------|-------|
+| XSS via i18n keys | PASS | All text rendered via React JSX (auto-escaped). No `dangerouslySetInnerHTML`. |
+| External image loading | PASS | `next.config.ts` restricts `remotePatterns` to `images.unsplash.com` only. No open proxy. |
+| Security headers | PASS | X-Frame-Options DENY, X-Content-Type-Options nosniff, HSTS with includeSubDomains, Referrer-Policy, Permissions-Policy all configured. |
+| No secrets in code | PASS | No API keys, tokens, or credentials in any PROJ-4 files. |
+| Client-side only | PASS | No API routes, no server actions, no user input. Pure static rendering -- minimal attack surface. |
+
+### Responsive Checks (Code-based)
+
+| Breakpoint | Check | Result |
+|------------|-------|--------|
+| 375px (mobile) | Stats: 2-col grid, cards: 1-col | PASS (`grid-cols-2` / `grid-cols-1`) |
+| 768px (tablet) | Stats: 4-col grid, cards: 2-col | PASS (`md:grid-cols-4` / `sm:grid-cols-2`) |
+| 1440px (desktop) | Max-width container, 2-col cards | PASS (`max-w-7xl` container) |
+
+### Regression Check
+
+No regressions detected in PROJ-1, PROJ-2, or PROJ-3 files. The only change to shared files was adding `stats.yearsLabel` to locale JSON files, which is additive and non-breaking.
+
+### Summary
+
+- **4 of 7 acceptance criteria PASS**
+- **2 PASS after fix applied during QA** (AC-1)
+- **1 FAIL** (AC-5 partial -- badge and alt text not fully bilingual)
+- **4 bugs total**: 1 fixed, 3 open (0 critical, 2 medium, 2 low)
+- **Security audit**: PASS -- no vulnerabilities found
+- **Recommendation**: Fix BUG-2 (badge i18n) before deployment. BUG-3 and BUG-4 can be addressed in a follow-up.
 
 ## Deployment
 _To be added by /deploy_
