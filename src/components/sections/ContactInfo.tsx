@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Mail, Phone, Smartphone, MapPin, Building2 } from "lucide-react";
+import { Mail, Phone, Smartphone, MapPin } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 function ContactItem({
@@ -16,11 +16,11 @@ function ContactItem({
   label?: string;
 }) {
   const content = (
-    <div className="flex items-start gap-4 rounded-lg p-3 -mx-3 transition-all duration-200 hover:bg-white/[0.04]">
+    <div className="flex items-center gap-4 rounded-lg p-3 -mx-3 transition-all duration-200 hover:bg-white/[0.04]">
       <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-accent/10 transition-colors duration-200 group-hover:bg-accent/20">
         <Icon className="h-4 w-4 text-accent" aria-hidden="true" />
       </div>
-      <div className="text-sm leading-relaxed pt-1.5">{children}</div>
+      <div className="text-sm leading-relaxed">{children}</div>
     </div>
   );
 
@@ -86,16 +86,6 @@ export function ContactInfo() {
           <p className="text-white/50">D-47495 Rheinberg, Germany</p>
         </ContactItem>
 
-        <ContactItem icon={Building2}>
-          <p className="font-medium text-white/90">
-            {t("universityLabel")}
-          </p>
-          <div className="text-white/50">
-            <p>Universität Duisburg-Essen</p>
-            <p>IW/ETS, Bismarckstr. 81</p>
-            <p>D-47048 Duisburg</p>
-          </div>
-        </ContactItem>
       </div>
     </div>
   );

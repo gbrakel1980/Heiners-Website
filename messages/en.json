@@ -43,17 +43,27 @@
     "heading": "A Lifetime of Innovation in Cable Engineering",
     "lead": "Prof. Dr.-Ing. habil. Heinrich Brakelmann is one of the world's foremost authorities on high-voltage power cable systems — combining five decades of academic research with hands-on delivery of more than 110 major energy infrastructure projects.",
     "bio1": "He studied electrical engineering at RWTH Aachen (Diploma 1971) and completed his doctoral thesis on circuit breakers in 1973. He then joined Felten & Guilleaume Energietechnik AG in Cologne, leading an R&D unit focused on high-power cable technology — a role that grounded his theoretical expertise in large-scale industrial practice.",
-    "bio2": "From the 1980s onward, Brakelmann held the Chair for Power Cable Technology at the University of Duisburg-Essen, where he served as Professor at the Institute for Energy Transport and Storage (IW/ETS) for over two decades. Now Professor emeritus, he continues to publish and consult at the frontier of the field.",
-    "bio3": "Through BCC Cable Consulting, he brings this unmatched combination of academic depth and project experience to clients worldwide — from offshore wind farm developers to national grid operators.",
+    "bio2": "In 1977, he joined the University of Duisburg as chief engineer, earned his habilitation in 1985, was appointed apl. professor in 1992, and became full professor in 1994. At the Institute for Energy Transport and Storage (IW/ETS), he shaped the discipline over two decades. Now Professor emeritus, he continues to publish and consult at the frontier of the field.",
+    "bio3": "He is author of approximately 260 technical publications and four books in the field of cable technology as well as high-voltage and high-current engineering. Through BCC Cable Consulting, he brings this unmatched combination of academic depth and project experience to clients worldwide — from offshore wind farm developers to national grid operators. He serves on the advisory board of the \"Netzplattform\" of the Federal Ministry for Economics and Energy (BMWi) for \"Sustainable Grids\".",
     "awardsHeading": "Awards & Recognition",
     "award1Title": "IEEE PES Prize Paper Award 2019",
     "award1Desc": "For \"Rating of Underground Power Cables with Boundary Temperature Restrictions\" — IEEE Transactions on Power Delivery",
     "award2Title": "ETG Award 1982",
     "award2Desc": "VDE/ETG Award for outstanding contributions to power cable technology",
     "award3Title": "CIGRE Working Group Contributor",
-    "award3Desc": "Long-standing contributions to CIGRE Working Groups B1 on cable systems",
-    "affiliationHeading": "Affiliation",
-    "affiliation": "Professor emeritus, Institute for Energy Transport and Storage (IW/ETS), Faculty of Engineering Sciences, University of Duisburg-Essen"
+    "award3Desc": "Long-standing member of CIGRE WG 21-02 (current ratings), WG B1-05 (transient effects on long cables), WG B1.23 (EMF impact on cable ratings), WG B1.41 (long-term soil performance), SC 21 (cables), and German working group AK 411.1.1",
+    "affiliationHeading": "Academic Background",
+    "affiliation": "Professor emeritus, Institute for Energy Transport and Storage (IW/ETS), Faculty of Engineering Sciences, University of Duisburg-Essen",
+    "credentialTitle": "Professor emeritus",
+    "credentialInstitution": "University of Duisburg-Essen",
+    "credentialDepartment": "Institute for Energy Transport and Storage (IW/ETS)",
+    "credentialRecognitionLabel": "Recognition",
+    "credentialRecognition1": "IEEE PES Prize Paper Award 2019",
+    "credentialRecognition2": "ETG Award (VDE/ETG), 1982",
+    "credentialSpecLabel": "Specialization",
+    "credentialSpec1": "High-Voltage Cable Systems",
+    "credentialSpec2": "Offshore Wind Energy",
+    "credentialSpec3": "Thermal Analysis & Rating"
   },
   "projects": {
     "sectionLabel": "Projects",
@@ -97,7 +107,7 @@
     "emailLabel": "Send email",
     "phoneLabel": "Call office phone",
     "mobileLabel": "Call mobile phone",
-    "universityLabel": "University Affiliation",
+    "universityLabel": "Academic Background",
     "fields": {
       "name": "Full Name",
       "company": "Company / Organization",
@@ -139,8 +149,13 @@
       },
       "cigre": {
         "organization": "CIGRE",
-        "description": "Long-standing member of Working Group B1, contributing to international standards and technical brochures on high-voltage cable systems.",
+        "description": "Long-standing member of WG 21-02 (current ratings), WG B1-05 (transient effects), WG B1.23 (EMF impact), WG B1.41 (soil performance), SC 21 (cables), contributing to international standards and technical brochures.",
         "type": "Working Group"
+      },
+      "bmwi": {
+        "organization": "BMWi — Federal Ministry for Economics and Energy",
+        "description": "Member of the advisory board of the \"Netzplattform\" for \"Sustainable Grids\", advising on national grid expansion and underground cable policy.",
+        "type": "Advisory Board"
       },
       "vdeEtg": {
         "organization": "VDE / ETG",
@@ -168,7 +183,8 @@
       "vde": "VDE / ETG",
       "cigre": "CIGRE Working Group B1",
       "uniDue": "University of Duisburg-Essen",
-      "rwth": "RWTH Aachen University"
+      "rwth": "RWTH Aachen University",
+      "bmwi": "BMWi Netzplattform"
     }
   },
   "publications": {
@@ -273,16 +289,12 @@
         "description": "Inpark grid layout and connection to the transmission grid for offshore wind farms. Comprehensive cabling concepts that optimize cost, reliability, and power delivery."
       },
       "thermal": {
-        "title": "Thermal Analysis & Cable Rating",
-        "description": "Transient and stationary current ratings, heating behavior of submarine and underground cables. Precise thermal modeling ensures safe operation at maximum capacity."
+        "title": "Cable Analysis & Rating",
+        "description": "Thermal and electrical analysis of cable and overhead line systems. Transient and stationary current ratings, switching surges, lightning impacts, and heating behavior — precise modeling for safe operation at maximum capacity."
       },
       "emf": {
         "title": "EMF & Magnetic Shielding",
         "description": "Analysis of electric, magnetic, and thermal fields around cable systems. Expert assessment of EMF exposure and design of effective shielding measures."
-      },
-      "transmission": {
-        "title": "Transmission Behavior Analysis",
-        "description": "Transient and stationary behavior analysis of cables and overhead lines. Detailed modeling of switching surges, lightning impacts, and steady-state performance."
       },
       "layout": {
         "title": "Wind Park Cable Layout Optimization",

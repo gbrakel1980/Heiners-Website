@@ -51,8 +51,8 @@ export async function generateMetadata({
       images: [
         {
           url: "/images/brakelmann.png",
-          width: 480,
-          height: 600,
+          width: 605,
+          height: 426,
           alt: "Prof. Dr.-Ing. Heinrich Brakelmann — BCC Cable Consulting",
         },
       ],

@@ -6,7 +6,6 @@ import {
   Wind,
   Thermometer,
   Shield,
-  Activity,
   LayoutGrid,
   MonitorCheck,
 } from "lucide-react";
@@ -20,7 +19,6 @@ const SERVICE_KEYS = [
   "offshore",
   "thermal",
   "emf",
-  "transmission",
   "layout",
   "monitoring",
 ] as const;
@@ -30,7 +28,6 @@ const ICON_MAP: Record<(typeof SERVICE_KEYS)[number], LucideIcon> = {
   offshore: Wind,
   thermal: Thermometer,
   emf: Shield,
-  transmission: Activity,
   layout: LayoutGrid,
   monitoring: MonitorCheck,
 };
@@ -50,13 +47,13 @@ export default function ServicesSection() {
 
         <div ref={gridRef} className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {SERVICE_KEYS.map((key) => (
-            <div key={key} className="reveal-hidden">
               <ServiceCard
+                key={key}
+                className="reveal-hidden"
                 icon={ICON_MAP[key]}
                 title={t(`items.${key}.title`)}
                 description={t(`items.${key}.description`)}
               />
-            </div>
           ))}
         </div>
       </div>

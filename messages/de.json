@@ -41,19 +41,29 @@
   "about": {
     "sectionLabel": "Über uns",
     "heading": "Ein Leben für Innovation in der Kabeltechnik",
-    "lead": "Prof. Dr.-Ing. habil. Heinrich Brakelmann ist eine der weltweit führenden Autoritäten für Hochspannungskabelsysteme – mit fünf Jahrzehnten akademischer Forschung und der Umsetzung von über 110 großen Energieinfrastrukturprojekten.",
+    "lead": "Prof. Dr.-Ing. habil. Heinrich Brakelmann ist einer der weltweit führenden Experten für Hochspannungskabelsysteme – mit fünf Jahrzehnten akademischer Forschung und der Umsetzung von über 110 großen Energieinfrastrukturprojekten.",
     "bio1": "Er studierte Elektrotechnik an der RWTH Aachen (Diplom 1971) und promovierte 1973 über Leistungsschalter. Anschließend leitete er bei der Felten & Guilleaume Energietechnik AG in Köln eine F&E-Einheit für Hochleistungskabeltechnologie.",
-    "bio2": "Ab den 1980er Jahren lehrte Brakelmann an der Universität Duisburg-Essen als Professor am Institut für Energie-Transport und -Speicherung (IW/ETS). Als Professor emeritus forscht und berät er weiterhin an der Spitze seines Fachgebiets.",
-    "bio3": "Mit BCC Cable Consulting bringt er diese einzigartige Kombination aus wissenschaftlicher Tiefe und Projekterfahrung zu Kunden weltweit – von Offshore-Windparkentwicklern bis zu nationalen Netzbetreibern.",
+    "bio2": "1977 begann er als Oberingenieur an der Universität Duisburg, habilitierte sich 1985, wurde 1992 zum apl. Professor und 1994 zum ordentlichen Professor berufen. Am Institut für Energie-Transport und -Speicherung (IW/ETS) prägte er über zwei Jahrzehnte das Fachgebiet. Als Professor emeritus forscht und berät er weiterhin an der Spitze der Kabeltechnik.",
+    "bio3": "Er ist Autor von ca. 260 Fachpublikationen und vier B\u00fcchern auf dem Gebiet der Kabeltechnik sowie der Hochspannungs- und Hochstromtechnik. Mit BCC Cable Consulting bringt er diese einzigartige Kombination aus wissenschaftlicher Tiefe und Projekterfahrung zu Kunden weltweit \u2013 von Offshore-Windparkentwicklern bis zu nationalen Netzbetreibern. Er ist Mitglied des Beirats der \u201ENetzplattform\u201C des Bundesministeriums f\u00fcr Wirtschaft und Energie (BMWi) f\u00fcr \u201ENachhaltige Netze\u201C.",
     "awardsHeading": "Auszeichnungen & Anerkennungen",
     "award1Title": "IEEE PES Prize Paper Award 2019",
     "award1Desc": "Für \"Rating of Underground Power Cables with Boundary Temperature Restrictions\" – IEEE Transactions on Power Delivery",
     "award2Title": "ETG-Preis 1982",
     "award2Desc": "VDE/ETG-Auszeichnung für herausragende Beiträge zur Energiekabeltechnik",
     "award3Title": "CIGRE Working Group Mitglied",
-    "award3Desc": "Langjährige Beiträge zu CIGRE-Arbeitsgruppen B1 über Kabelsysteme",
-    "affiliationHeading": "Zugehörigkeit",
-    "affiliation": "Professor emeritus, Institut für Energie-Transport und -Speicherung (IW/ETS), Fakultät für Ingenieurwissenschaften, Universität Duisburg-Essen"
+    "award3Desc": "Langjähriges Mitglied der CIGRE WG 21-02 (Belastbarkeiten), WG B1-05 (Transiente Effekte langer Kabel), WG B1.23 (EMF-Einfluss auf Kabelbelastbarkeiten), WG B1.41 (Langzeitverhalten von Böden und Bettungsmaterial), SC 21 (Kabel) sowie der deutschen Arbeitsgruppe AK 411.1.1",
+    "affiliationHeading": "Akademischer Hintergrund",
+    "affiliation": "Professor emeritus, Institut für Energie-Transport und -Speicherung (IW/ETS), Fakultät für Ingenieurwissenschaften, Universität Duisburg-Essen",
+    "credentialTitle": "Professor emeritus",
+    "credentialInstitution": "Universität Duisburg-Essen",
+    "credentialDepartment": "Institut für Energie-Transport und -Speicherung (IW/ETS)",
+    "credentialRecognitionLabel": "Anerkennung",
+    "credentialRecognition1": "IEEE PES Prize Paper Award 2019",
+    "credentialRecognition2": "ETG-Preis (VDE/ETG), 1982",
+    "credentialSpecLabel": "Spezialisierung",
+    "credentialSpec1": "Hochspannungskabelsysteme",
+    "credentialSpec2": "Offshore-Windenergie",
+    "credentialSpec3": "Thermische Analyse & Belastbarkeit"
   },
   "projects": {
     "sectionLabel": "Projekte",
@@ -97,7 +107,7 @@
     "emailLabel": "E-Mail senden",
     "phoneLabel": "Festnetz anrufen",
     "mobileLabel": "Mobil anrufen",
-    "universityLabel": "Universitäre Zugehörigkeit",
+    "universityLabel": "Akademischer Hintergrund",
     "fields": {
       "name": "Vollständiger Name",
       "company": "Unternehmen / Organisation",
@@ -134,32 +144,37 @@
     "items": {
       "ieee": {
         "organization": "IEEE Power & Energy Society",
-        "description": "Prize Paper Award 2019 fuer \"Rating of Underground Power Cables with Boundary Temperature Restrictions\" in IEEE Transactions on Power Delivery.",
+        "description": "Prize Paper Award 2019 für \"Rating of Underground Power Cables with Boundary Temperature Restrictions\" in IEEE Transactions on Power Delivery.",
         "type": "Auszeichnung"
       },
       "cigre": {
         "organization": "CIGRE",
-        "description": "Langjaehriges Mitglied der Arbeitsgruppe B1, mit Beitraegen zu internationalen Standards und technischen Broschueren ueber Hochspannungskabelsysteme.",
+        "description": "Langjähriges Mitglied der WG 21-02 (Belastbarkeiten), WG B1-05 (Transiente Effekte), WG B1.23 (EMF-Einfluss), WG B1.41 (Langzeitverhalten Böden), SC 21 (Kabel), mit Beiträgen zu internationalen Standards und technischen Broschüren.",
         "type": "Arbeitsgruppe"
+      },
+      "bmwi": {
+        "organization": "BMWi — Bundesministerium für Wirtschaft und Energie",
+        "description": "Mitglied des Beirats der \u201ENetzplattform\u201C f\u00fcr \u201ENachhaltige Netze\u201C, beratend zu Netzausbau und Erdkabelpolitik auf nationaler Ebene.",
+        "type": "Beirat"
       },
       "vdeEtg": {
         "organization": "VDE / ETG",
-        "description": "ETG-Preis 1982 fuer herausragende Beitraege zur Energiekabeltechnik. Aktives Mitglied in VDE-Fachausschuessen.",
+        "description": "ETG-Preis 1982 für herausragende Beiträge zur Energiekabeltechnik. Aktives Mitglied in VDE-Fachausschüssen.",
         "type": "Auszeichnung & Gremium"
       },
       "uniDue": {
-        "organization": "Universitaet Duisburg-Essen",
-        "description": "Professor und Lehrstuhlinhaber fuer Energiekabeltechnik am Institut fuer Energie-Transport und -Speicherung (IW/ETS). Jetzt Professor emeritus.",
+        "organization": "Universität Duisburg-Essen",
+        "description": "Professor und Lehrstuhlinhaber für Energiekabeltechnik am Institut für Energie-Transport und -Speicherung (IW/ETS). Jetzt Professor emeritus.",
         "type": "Lehrstuhl"
       },
       "tsos": {
-        "organization": "Uebertragungsnetzbetreiber",
-        "description": "Beratungsprojekte mit grossen europaeischen UeNB zu Kabelbelastbarkeit, thermischer Analyse und Systemintegration fuer Netzausbauvorhaben.",
+        "organization": "Übertragungsnetzbetreiber",
+        "description": "Beratungsprojekte mit großen europäischen ÜNB zu Kabelbelastbarkeit, thermischer Analyse und Systemintegration für Netzausbauvorhaben.",
         "type": "Beratung"
       },
       "windDevelopers": {
         "organization": "Offshore-Windparkentwickler",
-        "description": "Inpark-Netzlayout und Kabelauslegung fuer ueber 40 Offshore-Windparks in der Nord- und Ostsee.",
+        "description": "Inpark-Netzlayout und Kabelauslegung für über 40 Offshore-Windparks in der Nord- und Ostsee.",
         "type": "Beratung"
       }
     },
@@ -167,8 +182,9 @@
       "ieee": "IEEE Power & Energy Society",
       "vde": "VDE / ETG",
       "cigre": "CIGRE Arbeitsgruppe B1",
-      "uniDue": "Universitaet Duisburg-Essen",
-      "rwth": "RWTH Aachen"
+      "uniDue": "Universität Duisburg-Essen",
+      "rwth": "RWTH Aachen",
+      "bmwi": "BMWi Netzplattform"
     }
   },
   "publications": {
@@ -273,16 +289,12 @@
         "description": "Inpark-Netzlayout und Anbindung an das Übertragungsnetz für Offshore-Windparks. Umfassende Verkabelungskonzepte, die Kosten, Zuverlässigkeit und Leistung optimieren."
       },
       "thermal": {
-        "title": "Thermische Analyse & Kabelbelastbarkeit",
-        "description": "Transiente und stationäre Strombelastbarkeiten, Erwärmungsverhalten von See- und Erdkabeln. Präzise thermische Modellierung gewährleistet sicheren Betrieb bei maximaler Kapazität."
+        "title": "Kabelanalyse & Belastbarkeit",
+        "description": "Thermische und elektrische Analyse von Kabel- und Freileitungssystemen. Transiente und stationäre Strombelastbarkeiten, Schaltstöße, Blitzeinwirkungen und Erwärmungsverhalten — präzise Modellierung für sicheren Betrieb bei maximaler Kapazität."
       },
       "emf": {
         "title": "EMF & Magnetische Abschirmung",
         "description": "Analyse elektrischer, magnetischer und thermischer Felder um Kabelsysteme. Fachkundige Bewertung der EMF-Exposition und Entwicklung wirksamer Abschirmungsmaßnahmen."
-      },
-      "transmission": {
-        "title": "Übertragungsverhalten-Analyse",
-        "description": "Analyse des transienten und stationären Verhaltens von Kabeln und Freileitungen. Detaillierte Modellierung von Schaltstößen, Blitzeinwirkungen und stationärem Betriebsverhalten."
       },
       "layout": {
         "title": "Windpark-Kabellayout-Optimierung",

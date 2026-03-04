@@ -12,12 +12,14 @@ import {
   GraduationCap,
   Zap,
   BookOpen,
+  Landmark,
   type LucideIcon,
 } from "lucide-react";
 
 const COLLABORATION_KEYS = [
   "ieee",
   "cigre",
+  "bmwi",
   "vdeEtg",
   "uniDue",
   "tsos",
@@ -27,13 +29,14 @@ const COLLABORATION_KEYS = [
 const COLLABORATION_ICONS: Record<string, LucideIcon> = {
   ieee: Award,
   cigre: Users,
+  bmwi: Landmark,
   vdeEtg: Zap,
   uniDue: GraduationCap,
   tsos: Building2,
   windDevelopers: BookOpen,
 };
 
-const ORGANIZATION_KEYS = ["ieee", "vde", "cigre", "uniDue", "rwth"] as const;
+const ORGANIZATION_KEYS = ["ieee", "vde", "cigre", "uniDue", "rwth", "bmwi"] as const;
 
 export default function TestimonialsSection() {
   const t = useTranslations("testimonials");
@@ -71,10 +74,10 @@ export default function TestimonialsSection() {
             ))}
           </div>
 
-          {/* Desktop: 3-column grid with stagger animation */}
-          <div ref={gridRef} className="hidden gap-6 md:grid md:grid-cols-2 lg:grid-cols-3">
+          {/* Desktop: flex layout with centered rows (4 top, 3 bottom centered) */}
+          <div ref={gridRef} className="hidden md:flex md:flex-wrap md:justify-center md:gap-6">
             {COLLABORATION_KEYS.map((key) => (
-              <div key={key} className="reveal-hidden">
+              <div key={key} className="reveal-hidden md:w-[calc(50%-12px)] lg:w-[calc(25%-18px)]">
                 <CollaborationCard
                   organization={t(`items.${key}.organization`)}
                   description={t(`items.${key}.description`)}
