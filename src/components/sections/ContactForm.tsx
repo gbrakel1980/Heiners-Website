@@ -20,7 +20,7 @@ import {
 } from "@/components/ui/form";
 
 const inputClassName =
-  "bg-white/[0.04] border-white/[0.08] text-white placeholder:text-white/25 transition-all duration-300 focus-visible:ring-1 focus-visible:ring-accent/50 focus-visible:border-accent/30 focus-visible:bg-white/[0.06] hover:border-white/15 hover:bg-white/[0.06]";
+  "bg-white/[0.03] border-white/[0.07] text-white placeholder:text-white/20 rounded-lg transition-all duration-300 focus-visible:ring-1 focus-visible:ring-accent/40 focus-visible:border-accent/25 focus-visible:bg-white/[0.05] hover:border-white/12 hover:bg-white/[0.05]";
 
 export function ContactForm() {
   const t = useTranslations("contact");
@@ -108,7 +108,7 @@ export function ContactForm() {
             name="name"
             render={({ field, fieldState }) => (
               <FormItem>
-                <FormLabel className="text-sm font-medium text-white/70">
+                <FormLabel className="text-[13px] font-medium text-white/50">
                   {t("fields.name")} <span className="text-accent">*</span>
                 </FormLabel>
                 <FormControl>
@@ -132,7 +132,7 @@ export function ContactForm() {
             name="company"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-sm font-medium text-white/70">
+                <FormLabel className="text-[13px] font-medium text-white/50">
                   {t("fields.company")}
                 </FormLabel>
                 <FormControl>
@@ -152,7 +152,7 @@ export function ContactForm() {
           name="email"
           render={({ field, fieldState }) => (
             <FormItem>
-              <FormLabel className="text-sm font-medium text-white/70">
+              <FormLabel className="text-[13px] font-medium text-white/50">
                 {t("fields.email")} <span className="text-accent">*</span>
               </FormLabel>
               <FormControl>
@@ -177,7 +177,7 @@ export function ContactForm() {
           name="subject"
           render={({ field, fieldState }) => (
             <FormItem>
-              <FormLabel className="text-sm font-medium text-white/70">
+              <FormLabel className="text-[13px] font-medium text-white/50">
                 {t("fields.subject")} <span className="text-accent">*</span>
               </FormLabel>
               <FormControl>
@@ -201,7 +201,7 @@ export function ContactForm() {
           name="message"
           render={({ field, fieldState }) => (
             <FormItem>
-              <FormLabel className="text-sm font-medium text-white/70">
+              <FormLabel className="text-[13px] font-medium text-white/50">
                 {t("fields.message")} <span className="text-accent">*</span>
               </FormLabel>
               <FormControl>
@@ -239,10 +239,8 @@ export function ContactForm() {
         <Button
           type="submit"
           disabled={isSubmitting}
-          className="group relative w-full overflow-hidden bg-accent text-primary font-semibold hover:bg-accent/90 h-12 text-base transition-all duration-300 hover:shadow-lg hover:shadow-accent/20"
+          className="group relative w-full overflow-hidden rounded-lg bg-accent/90 text-primary font-semibold hover:bg-accent h-12 text-base transition-all duration-300 hover:shadow-lg hover:shadow-accent/20"
         >
-          {/* Subtle shimmer effect on hover */}
-          <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
           <span className="relative flex items-center justify-center gap-2">
             {isSubmitting ? (
               <>

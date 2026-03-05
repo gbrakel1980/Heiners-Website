@@ -141,7 +141,7 @@ No new packages required. All needed components are already installed:
 | AC-1 | Statistics bar displays 110+, 40+, 70+, 50+ with bilingual labels | PASS (after fix) | "Years of Expertise" was hardcoded in English -- fixed during QA by adding `stats.yearsLabel` key to both locale files. All four counters now use i18n keys. |
 | AC-2 | At least 4 project cards: offshore grid, onshore HV, submarine thermal, magnetic shielding | PASS | Four cards defined in PROJECTS array matching all required topics. |
 | AC-3 | Each card shows: badge, title, description (2-3 sentences), key technology | PASS | ProjectCard renders Badge, CardTitle, description paragraph, and tech label/value. |
-| AC-4 | Filter tabs: All / Offshore / Onshore | PASS | shadcn/ui Tabs with useState filter. Filter logic correctly filters by `category` field. |
+| AC-4 | Filter tabs: All / Offshore / Onshore | FAIL -- see BUG-4 | Filter logic is correct, but `useStaggerReveal` only fires once. After switching tabs, newly rendered cards remain stuck with `reveal-hidden` (opacity: 0). Cards disappear and never reappear. |
 | AC-5 | Section heading and all content bilingual (EN/DE) | FAIL -- see BUG-2, BUG-3 | Badge text and image alt text are hardcoded in English. |
 | AC-6 | Responsive: 2-col desktop, 1-col mobile | PASS | Grid uses `grid-cols-1 sm:grid-cols-2`. Stats bar uses `grid-cols-2 md:grid-cols-4`. |
 | AC-7 | Confidentiality note displayed | PASS | `t("confidentialityNote")` rendered, both EN and DE translations present. |
@@ -176,7 +176,20 @@ No new packages required. All needed components are already installed:
 - Severity: Low (accessibility impact for DE screen reader users)
 - Priority: P3
 
-**BUG-4 (Low, OPEN): Stats bar labels differ from acceptance criteria wording**
+**BUG-4 (High, OPEN): Project cards disappear when switching filter tabs**
+- Files: `src/hooks/useScrollReveal.ts` (useStaggerReveal), `src/components/sections/ProjectsSection.tsx`
+- Steps to reproduce:
+  1. Open the Projects section so cards are visible (scroll down until they animate in)
+  2. Click any filter tab (e.g., "Offshore" or "Onshore")
+  3. Observe: no project cards are displayed
+  4. Switch to another tab -- still no cards
+- Root cause: `useStaggerReveal` runs its IntersectionObserver effect only once (dependencies: `[threshold, rootMargin]`). On first intersection, it transitions children from `reveal-hidden` to `reveal-visible` and then calls `observer.unobserve(container)`. When React re-renders with a new filtered list, newly mounted `<div className="reveal-hidden">` elements have `opacity: 0` and `transform: translateY(30px)`, but the observer has already fired and will never run again. The new cards remain invisible.
+- Impact: Core functionality completely broken -- users cannot use the project filter at all. After the first filter change, no cards are ever shown again regardless of which tab is selected.
+- Severity: High (core feature broken, no workaround)
+- Priority: P0
+- Suggested fix: Either (a) add `activeFilter` to the useEffect dependency array so the observer re-initializes on filter change, or (b) skip the `reveal-hidden` class for cards that are rendered after the initial reveal (e.g., track whether the initial animation has already played and render subsequent cards as `reveal-visible` directly), or (c) do not use `useStaggerReveal` for dynamically filtered content -- apply the reveal only once and let filter changes render cards immediately visible.
+
+**BUG-5 (Low, OPEN): Stats bar labels differ from acceptance criteria wording** (previously BUG-4)
 - The AC specifies: "110+ Projects Completed" / "110+ Projekte abgeschlossen"
 - Actual EN: "Projects Completed" (matches). Actual DE: "Abgeschlossene Projekte" (close but reworded).
 - The AC specifies: "40+ Offshore Wind Farm Projects" / "40+ Offshore-Windpark-Projekte"
@@ -208,12 +221,14 @@ No regressions detected in PROJ-1, PROJ-2, or PROJ-3 files. The only change to s
 
 ### Summary
 
-- **4 of 7 acceptance criteria PASS**
-- **2 PASS after fix applied during QA** (AC-1)
+- **3 of 7 acceptance criteria PASS**
+- **1 PASS after fix applied during QA** (AC-1)
+- **1 FAIL** (AC-4 -- filter tabs broken due to BUG-4)
 - **1 FAIL** (AC-5 partial -- badge and alt text not fully bilingual)
-- **4 bugs total**: 1 fixed, 3 open (0 critical, 2 medium, 2 low)
+- **5 bugs total**: 1 fixed, 4 open (0 critical, 1 high, 1 medium, 2 low)
 - **Security audit**: PASS -- no vulnerabilities found
-- **Recommendation**: Fix BUG-2 (badge i18n) before deployment. BUG-3 and BUG-4 can be addressed in a follow-up.
+- **Production-ready: NO** -- BUG-4 (High) must be fixed first. Filter functionality is completely broken.
+- **Recommendation**: Fix BUG-4 (filter cards disappear) as P0, then BUG-2 (badge i18n) as P2. BUG-3 and BUG-5 can be addressed in a follow-up.
 
 ## Deployment
 _To be added by /deploy_

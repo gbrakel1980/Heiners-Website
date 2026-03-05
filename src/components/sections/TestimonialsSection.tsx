@@ -3,18 +3,18 @@
 import { useTranslations } from "next-intl";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { CollaborationCard } from "@/components/sections/CollaborationCard";
-import { Badge } from "@/components/ui/badge";
 import { useStaggerReveal } from "@/hooks/useScrollReveal";
 import {
-  Building2,
   Award,
   Users,
   GraduationCap,
   Zap,
-  BookOpen,
+  Wind,
   Landmark,
+  Building2,
   type LucideIcon,
 } from "lucide-react";
+import Image from "next/image";
 
 const COLLABORATION_KEYS = [
   "ieee",
@@ -33,10 +33,16 @@ const COLLABORATION_ICONS: Record<string, LucideIcon> = {
   vdeEtg: Zap,
   uniDue: GraduationCap,
   tsos: Building2,
-  windDevelopers: BookOpen,
+  windDevelopers: Wind,
 };
 
-const ORGANIZATION_KEYS = ["ieee", "vde", "cigre", "uniDue", "rwth", "bmwi"] as const;
+const LOGO_ITEMS = [
+  { key: "ieee", src: "/images/logos/ieee-pes.png", alt: "IEEE Power & Energy Society", imgClass: "h-14 md:h-16 max-w-none" },
+  { key: "vde", src: "/images/logos/vde etg.png", alt: "VDE / ETG", imgClass: "h-10 md:h-14 max-w-none" },
+  { key: "cigre", src: "/images/logos/cigre.png", alt: "CIGRE", imgClass: "h-14 md:h-16 max-w-none" },
+  { key: "uniDue", src: "/images/logos/Uni-duisburg-essen-logo-2022.jpg", alt: "Universität Duisburg-Essen", imgClass: "h-10 md:h-14 max-w-none" },
+  { key: "bmwi", src: "/images/logos/Bundesministerium_für_Wirtschaft_und_Energie_Logo.svg.png", alt: "BMWi — Bundesministerium für Wirtschaft und Energie", imgClass: "h-14 md:h-16 max-w-none" },
+] as const;
 
 export default function TestimonialsSection() {
   const t = useTranslations("testimonials");
@@ -89,31 +95,31 @@ export default function TestimonialsSection() {
           </div>
         </div>
 
-        {/* Trusted By / Notable Collaborations badge strip */}
+        {/* Trusted By — logo strip */}
         <div className="mt-16 md:mt-20">
           <div className="flex items-center justify-center gap-3 mb-8">
-            <span className="h-px w-8 bg-accent/30" aria-hidden="true" />
-            <div className="flex items-center gap-2">
-              <Building2
-                className="h-4 w-4 text-accent/70"
-                aria-hidden="true"
-              />
-              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent/70">
-                {t("trustedByHeading")}
-              </span>
-            </div>
-            <span className="h-px w-8 bg-accent/30" aria-hidden="true" />
+            <span className="h-px w-8 bg-white/50" aria-hidden="true" />
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-white">
+              {t("trustedByHeading")}
+            </span>
+            <span className="h-px w-8 bg-white/50" aria-hidden="true" />
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-3 md:gap-4">
-            {ORGANIZATION_KEYS.map((key) => (
-              <Badge
-                key={key}
-                variant="outline"
-                className="border-accent/20 bg-surface-card/60 px-4 py-2 text-xs font-medium text-white/70 transition-colors hover:border-accent/40 hover:text-white md:text-sm"
+            {LOGO_ITEMS.map((item) => (
+              <div
+                key={item.key}
+                className="flex h-16 items-center justify-center rounded-xl bg-white px-5 shadow-sm transition-shadow duration-300 hover:shadow-md md:h-20 md:px-6"
               >
-                {t(`organizations.${key}`)}
-              </Badge>
+                <Image
+                  src={item.src}
+                  alt={item.alt}
+                  width={300}
+                  height={120}
+                  className={`w-auto object-contain ${item.imgClass}`}
+                  unoptimized
+                />
+              </div>
             ))}
           </div>
         </div>

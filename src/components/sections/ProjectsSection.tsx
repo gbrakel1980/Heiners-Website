@@ -45,7 +45,8 @@ export default function ProjectsSection() {
   const t = useTranslations("projects");
   const tStats = useTranslations("stats");
   const [activeFilter, setActiveFilter] = useState<FilterType>("all");
-  const gridRef = useStaggerReveal<HTMLDivElement>();
+  const [hasRevealed, setHasRevealed] = useState(false);
+  const gridRef = useStaggerReveal<HTMLDivElement>({ onReveal: () => setHasRevealed(true) });
 
   const filteredProjects =
     activeFilter === "all"
@@ -96,7 +97,7 @@ export default function ProjectsSection() {
         ) : (
           <div ref={gridRef} className="grid grid-cols-1 gap-6 sm:grid-cols-2">
             {filteredProjects.map((project) => (
-              <div key={project.key} className="reveal-hidden">
+              <div key={project.key} className={hasRevealed ? "reveal-visible" : "reveal-hidden"}>
                 <ProjectCard
                   title={t(`items.${project.key}.title`)}
                   description={t(`items.${project.key}.description`)}

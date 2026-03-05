@@ -16,9 +16,9 @@ function ContactItem({
   label?: string;
 }) {
   const content = (
-    <div className="flex items-center gap-4 rounded-lg p-3 -mx-3 transition-all duration-200 hover:bg-white/[0.04]">
-      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-accent/10 transition-colors duration-200 group-hover:bg-accent/20">
-        <Icon className="h-4 w-4 text-accent" aria-hidden="true" />
+    <div className="group/item flex items-center gap-4 rounded-xl p-3 -mx-3 transition-all duration-300 hover:bg-white/[0.04]">
+      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-accent/[0.08] ring-1 ring-accent/[0.12] transition-all duration-300 group-hover/item:bg-accent/[0.14] group-hover/item:ring-accent/[0.2]">
+        <Icon className="h-[18px] w-[18px] text-accent/80" aria-hidden="true" />
       </div>
       <div className="text-sm leading-relaxed">{children}</div>
     </div>
@@ -28,7 +28,7 @@ function ContactItem({
     return (
       <a
         href={href}
-        className="group text-white/80 transition-colors hover:text-white"
+        className="text-white/70 transition-colors duration-300 hover:text-white"
         aria-label={label}
       >
         {content}
@@ -36,27 +36,27 @@ function ContactItem({
     );
   }
 
-  return <div className="group text-white/80">{content}</div>;
+  return <div className="text-white/70">{content}</div>;
 }
 
 export function ContactInfo() {
   const t = useTranslations("contact");
 
   return (
-    <div className="flex flex-col gap-6">
-      <div>
-        <h3 className="font-display text-xl font-semibold text-white mb-2">
+    <div className="flex h-full flex-col">
+      <div className="mb-8">
+        <h3 className="font-display text-xl font-semibold text-white mb-3">
           {t("infoHeading")}
         </h3>
-        <p className="text-white/50 text-sm leading-relaxed">
+        <p className="text-white/40 text-sm leading-relaxed">
           {t("infoSubheading")}
         </p>
       </div>
 
       {/* Separator */}
-      <div className="h-px bg-gradient-to-r from-accent/20 via-white/10 to-transparent" />
+      <div className="h-px bg-gradient-to-r from-accent/15 via-white/[0.06] to-transparent mb-6" />
 
-      <div className="flex flex-col gap-1">
+      <div className="flex flex-col gap-2">
         <ContactItem
           icon={Mail}
           href="mailto:gerrit.brakelmann@gmail.com"
@@ -83,10 +83,12 @@ export function ContactInfo() {
 
         <ContactItem icon={MapPin}>
           <p>Schwalbenweg 8</p>
-          <p className="text-white/50">D-47495 Rheinberg, Germany</p>
+          <p className="text-white/40">D-47495 Rheinberg, Germany</p>
         </ContactItem>
-
       </div>
+
+      {/* Spacer to vertically center content on desktop */}
+      <div className="hidden lg:block mt-auto" aria-hidden="true" />
     </div>
   );
 }

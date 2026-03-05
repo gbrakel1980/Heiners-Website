@@ -49,11 +49,15 @@ export function useScrollReveal<T extends HTMLElement>(
  * Stagger-reveals children that have the "reveal-hidden" class.
  * Attach to a parent container (e.g., a card grid).
  */
+interface UseStaggerRevealOptions extends UseScrollRevealOptions {
+  onReveal?: () => void;
+}
+
 export function useStaggerReveal<T extends HTMLElement>(
-  options: UseScrollRevealOptions = {}
+  options: UseStaggerRevealOptions = {}
 ) {
   const ref = useRef<T>(null);
-  const { threshold = 0.1, rootMargin = "0px 0px -30px 0px" } = options;
+  const { threshold = 0.1, rootMargin = "0px 0px -30px 0px", onReveal } = options;
 
   useEffect(() => {
     const container = ref.current;
@@ -79,6 +83,7 @@ export function useStaggerReveal<T extends HTMLElement>(
             });
           });
           observer.unobserve(container);
+          onReveal?.();
         }
       },
       { threshold, rootMargin }
@@ -86,7 +91,7 @@ export function useStaggerReveal<T extends HTMLElement>(
 
     observer.observe(container);
     return () => observer.disconnect();
-  }, [threshold, rootMargin]);
+  }, [threshold, rootMargin, onReveal]);
 
   return ref;
 }

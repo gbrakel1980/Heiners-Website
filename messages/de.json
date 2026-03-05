@@ -40,7 +40,7 @@
   },
   "about": {
     "sectionLabel": "Über uns",
-    "heading": "Ein Leben für Innovation in der Kabeltechnik",
+    "heading": "F\u00fcnf Jahrzehnte Innovation in der Kabeltechnik",
     "lead": "Prof. Dr.-Ing. habil. Heinrich Brakelmann ist einer der weltweit führenden Experten für Hochspannungskabelsysteme – mit fünf Jahrzehnten akademischer Forschung und der Umsetzung von über 110 großen Energieinfrastrukturprojekten.",
     "bio1": "Er studierte Elektrotechnik an der RWTH Aachen (Diplom 1971) und promovierte 1973 über Leistungsschalter. Anschließend leitete er bei der Felten & Guilleaume Energietechnik AG in Köln eine F&E-Einheit für Hochleistungskabeltechnologie.",
     "bio2": "1977 begann er als Oberingenieur an der Universität Duisburg, habilitierte sich 1985, wurde 1992 zum apl. Professor und 1994 zum ordentlichen Professor berufen. Am Institut für Energie-Transport und -Speicherung (IW/ETS) prägte er über zwei Jahrzehnte das Fachgebiet. Als Professor emeritus forscht und berät er weiterhin an der Spitze der Kabeltechnik.",
@@ -140,7 +140,7 @@
     "sectionLabel": "Professionelles Netzwerk",
     "heading": "Professionelles Netzwerk",
     "subheading": "Organisationen und Institutionen, mit denen Prof. Brakelmann im Laufe seiner Karriere zusammengearbeitet hat.",
-    "trustedByHeading": "Vertraut von",
+    "trustedByHeading": "Organisationen & Institutionen",
     "items": {
       "ieee": {
         "organization": "IEEE Power & Energy Society",
