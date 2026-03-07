@@ -1,7 +1,8 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { Mail, MapPin, ChevronUp } from "lucide-react";
+import Link from "next/link";
 
 const NAV_ITEMS = [
   { key: "about", href: "#about" },
@@ -14,6 +15,7 @@ const NAV_ITEMS = [
 export function Footer() {
   const t = useTranslations("footer");
   const tNav = useTranslations("nav");
+  const locale = useLocale();
 
   const handleNavClick = (sectionId: string) => {
     document
@@ -91,9 +93,13 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-light-border pt-8 sm:flex-row">
-          <p className="text-xs text-light-text-muted/70">
-            {t("copyright")}
-          </p>
+          <div className="flex items-center gap-3 text-xs text-light-text-muted/70">
+            <p>{t("copyright")}</p>
+            <span>·</span>
+            <Link href={`/${locale}/impressum`} className="underline underline-offset-2 transition-colors hover:text-warm-accent-dark">
+              Impressum
+            </Link>
+          </div>
 
           {/* Back to top */}
           <button

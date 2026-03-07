@@ -59,10 +59,10 @@ export function ContactInfo() {
       <div className="flex flex-col gap-2">
         <ContactItem
           icon={Mail}
-          href="mailto:gerrit.brakelmann@gmail.com"
+          href="mailto:brakelmann.heinrich@gmail.com"
           label={t("emailLabel")}
         >
-          gerrit.brakelmann@gmail.com
+          brakelmann.heinrich@gmail.com
         </ContactItem>
 
         <ContactItem

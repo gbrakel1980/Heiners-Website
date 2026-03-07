@@ -10,9 +10,9 @@
   },
   "footer": {
     "tagline": "Expertenberatung für Hochspannungskabelsysteme und Offshore-Windenergie.",
-    "copyright": "© 2026 BCC Cable Consulting — Prof. Dr.-Ing. Heinrich Brakelmann. Alle Rechte vorbehalten.",
+    "copyright": "© 2026 BCC Cable Consulting — Prof. Dr.-Ing. em. Heinrich Brakelmann. Alle Rechte vorbehalten.",
     "contact": "Kontakt",
-    "email": "gerrit.brakelmann@gmail.com",
+    "email": "brakelmann.heinrich@gmail.com",
     "location": "Rheinberg, Deutschland"
   },
   "meta": {
@@ -40,11 +40,11 @@
   },
   "about": {
     "sectionLabel": "Über uns",
-    "heading": "F\u00fcnf Jahrzehnte Innovation in der Kabeltechnik",
+    "heading": "Fünf Jahrzehnte Innovation in der Hochspannungskabeltechnik",
     "lead": "Prof. Dr.-Ing. habil. Heinrich Brakelmann ist einer der weltweit führenden Experten für Hochspannungskabelsysteme – mit fünf Jahrzehnten akademischer Forschung und der Umsetzung von über 110 großen Energieinfrastrukturprojekten.",
     "bio1": "Er studierte Elektrotechnik an der RWTH Aachen (Diplom 1971) und promovierte 1973 über Leistungsschalter. Anschließend leitete er bei der Felten & Guilleaume Energietechnik AG in Köln eine F&E-Einheit für Hochleistungskabeltechnologie.",
     "bio2": "1977 begann er als Oberingenieur an der Universität Duisburg, habilitierte sich 1985, wurde 1992 zum apl. Professor und 1994 zum ordentlichen Professor berufen. Am Institut für Energie-Transport und -Speicherung (IW/ETS) prägte er über zwei Jahrzehnte das Fachgebiet. Als Professor emeritus forscht und berät er weiterhin an der Spitze der Kabeltechnik.",
-    "bio3": "Er ist Autor von ca. 260 Fachpublikationen und vier B\u00fcchern auf dem Gebiet der Kabeltechnik sowie der Hochspannungs- und Hochstromtechnik. Mit BCC Cable Consulting bringt er diese einzigartige Kombination aus wissenschaftlicher Tiefe und Projekterfahrung zu Kunden weltweit \u2013 von Offshore-Windparkentwicklern bis zu nationalen Netzbetreibern. Er ist Mitglied des Beirats der \u201ENetzplattform\u201C des Bundesministeriums f\u00fcr Wirtschaft und Energie (BMWi) f\u00fcr \u201ENachhaltige Netze\u201C.",
+    "bio3": "Er ist Autor von ca. 260 Fachpublikationen und vier Büchern auf dem Gebiet der Kabeltechnik sowie der Hochspannungs- und Hochstromtechnik. Mit BCC Cable Consulting bringt er diese einzigartige Kombination aus wissenschaftlicher Tiefe und Projekterfahrung zu Kunden weltweit – von Offshore-Windparkentwicklern bis zu nationalen Netzbetreibern. Er ist Mitglied des Beirats der „Netzplattform“ des Bundesministeriums für Wirtschaft und Energie (BMWi) für „Nachhaltige Netze“.",
     "awardsHeading": "Auszeichnungen & Anerkennungen",
     "award1Title": "IEEE PES Prize Paper Award 2019",
     "award1Desc": "Für \"Rating of Underground Power Cables with Boundary Temperature Restrictions\" – IEEE Transactions on Power Delivery",
@@ -69,32 +69,23 @@
     "sectionLabel": "Projekte",
     "heading": "110+ Projekte abgeschlossen",
     "subheading": "Eine Auswahl repräsentativer Projekte in Offshore- und Onshore-Kabelsystemen.",
-    "filterAll": "Alle",
-    "filterOffshore": "Offshore",
-    "filterOnshore": "Onshore",
-    "emptyState": "Keine Projekte in dieser Kategorie.",
     "confidentialityNote": "Projektdetails auf Anfrage verfügbar — Vertraulichkeit der Kunden wird gewahrt.",
     "keyTech": "Schlüsseltechnologie",
     "items": {
-      "northSeaOffshore": {
-        "title": "Offshore-Windpark Nordsee, 2019",
-        "description": "Vollständiges Inpark-Netzlayout für einen 400-MW-Offshore-Windpark in der Nordsee. Inklusive Kabelführung, Querschnittsauswahl und Anbindung an die Offshore-Umspannanlage.",
-        "tech": "Inpark-Netzlayout & Kabelauslegung"
+      "selfShieldingHV": {
+        "title": "Selbstabschirmendes Hochspannungskabel — IES-Kabel",
+        "description": "Extreme Anforderungen an die Magnetfeldbegrenzung in Kabelnähe erforderten einen neuen Ansatz. Auf Vorschlag von BCC entwickelte der Kabelhersteller nkt cables (Köln) das IES-Kabel (Kabel mit Integrierter Elektromagnetischer Schirmung). Die weltweit erste 150-kV-IES-Kabel-Installation (3×500 mm² Cu, 200 MVA) erfolgte durch den ÜNB Liandon in Amsterdam. BCC führte Messungen und numerische Validierung durch — beide stimmten gut überein und bestätigten die hervorragende Schirmwirkung.",
+        "tech": "Integrierte Elektromagnetische Schirmung"
       },
-      "onshoreHV": {
-        "title": "Onshore-Hochspannungstrasse, 2021",
-        "description": "Integration eines 220-kV-Erdkabelsystems in eine bestehende Freileitungstrasse. Detaillierte Thermische Analyse und Systemverträglichkeitsstudie.",
-        "tech": "HV-Kabelsystem-Integration"
+      "rinikenSwitzerland": {
+        "title": "Riniken, Schweiz — 380-kV-Erdkabelabschnitt",
+        "description": "Ein 1,5 km langer Abschnitt einer 40 km langen 380-kV-Freileitungstrasse war seit 20 Jahren durch Gerichtsentscheide blockiert. Erste Studien des ÜNB und des Kabelherstellers hielten eine Verkabelung für nicht sinnvoll. Drei BCC-Studien zu thermischen, mechanischen, konstruktiven, betrieblichen und elektromagnetischen Aspekten — unter Berücksichtigung moderner 380-kV-Kabel und neuer Verlegetechniken — lieferten die technische Grundlage für den Entscheid des Schweizer Bundesgerichts. BCC begleitet den ÜNB weiterhin bei Planung und Genehmigung.",
+        "tech": "380-kV-Erdkabelintegration"
       },
-      "submarineThermal": {
-        "title": "Tiefwasser-Exportkabelstudie, 2018",
-        "description": "Thermische Belastbarkeit und transiente Lastanalyse für ein 100 km langes Seeexportkabel zur Anbindung eines Offshore-Windparks an das Festlandnetz.",
-        "tech": "Thermische Analyse Seekabel"
-      },
-      "magneticShielding": {
-        "title": "Städtische Erdkabeltrasse, 2022",
-        "description": "EMF-Auswirkungsbeurteilung und Magnetfeldabschirmungskonzept für eine Hochstromkabeltrasse durch ein dicht besiedeltes Stadtgebiet.",
-        "tech": "Magnetische Abschirmung & EMF-Analyse"
+      "hotSpotDistrictHeating": {
+        "title": "Hot-Spot in 380-kV-Kabeltrasse mit Fernwärmeleitungen",
+        "description": "Eine 380-kV-Kabeltrasse musste gemeinsam mit 110-kV-Kabeln und zwei Fernwärmeleitungen geführt werden — eine thermisch besonders anspruchsvolle Situation. BCC löste das Problem durch zwei Maßnahmen: Einbettung der 380-kV-Kabel in einen speziell entwickelten Hochleistungsbeton mit extremer Wärmeleitfähigkeit (Entwicklung initiiert und begleitet durch BCC mit HeidelbergCement) sowie Einbau einer Wärmedämmplatte zwischen Kabeln und Fernwärmeleitungen. Die zeitabhängige Wärmeanalyse erfolgte durch BCC mit einem eigens entwickelten FEM-Programm für nichtlineare Kabelinstallationen.",
+        "tech": "Thermische FEM-Analyse & Spezialbeton"
       }
     }
   },
@@ -134,7 +125,7 @@
     "successMessage": "Ihre Nachricht wurde erfolgreich gesendet. Wir melden uns in Kürze bei Ihnen.",
     "errorGeneric": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt per E-Mail.",
     "errorRateLimit": "Zu viele Anfragen. Bitte versuchen Sie es in einer Stunde erneut.",
-    "errorServiceDown": "Unser E-Mail-Dienst ist vorübergehend nicht verfügbar. Bitte kontaktieren Sie uns direkt unter gerrit.brakelmann@gmail.com."
+    "errorServiceDown": "Unser E-Mail-Dienst ist vorübergehend nicht verfügbar. Bitte kontaktieren Sie uns direkt unter brakelmann.heinrich@gmail.com."
   },
   "testimonials": {
     "sectionLabel": "Professionelles Netzwerk",
@@ -154,7 +145,7 @@
       },
       "bmwi": {
         "organization": "BMWi — Bundesministerium für Wirtschaft und Energie",
-        "description": "Mitglied des Beirats der \u201ENetzplattform\u201C f\u00fcr \u201ENachhaltige Netze\u201C, beratend zu Netzausbau und Erdkabelpolitik auf nationaler Ebene.",
+        "description": "Mitglied des Beirats der „Netzplattform“ für „Nachhaltige Netze“, beratend zu Netzausbau und Erdkabelpolitik auf nationaler Ebene.",
         "type": "Beirat"
       },
       "vdeEtg": {
@@ -189,35 +180,33 @@
   },
   "publications": {
     "sectionLabel": "Publikationen & Auszeichnungen",
-    "heading": "258 Publikationen (1971\u20132023)",
-    "subheading": "F\u00fcnf Jahrzehnte Forschung zur Weiterentwicklung der Energiekabeltechnik.",
+    "heading": "258 Publikationen (1971–2023)",
+    "subheading": "Fünf Jahrzehnte Forschung zur Weiterentwicklung der Energiekabeltechnik.",
     "awardsHeading": "Auszeichnungen & Anerkennungen",
     "awards": {
       "ieee": {
         "title": "IEEE PES Prize Paper Award 2019",
-        "description": "F\u00fcr Publikation #234: \"Rating of Underground Power Cables with Boundary Temperature Restrictions\" \u2014 IEEE Transactions on Power Delivery, Aug 2018, S. 1895\u20131902"
+        "description": "Für Publikation #234: \"Rating of Underground Power Cables with Boundary Temperature Restrictions\" — IEEE Transactions on Power Delivery, Aug 2018, S. 1895–1902"
       },
       "etg": {
         "title": "ETG-Preis (VDE/ETG), 1982",
-        "description": "F\u00fcr herausragende Beitr\u00e4ge zur Energiekabeltechnik"
+        "description": "Für herausragende Beiträge zur Energiekabeltechnik"
       }
     },
-    "statLine": "258 Publikationen (1971\u20132023)",
-    "highlightsHeading": "Ausgew\u00e4hlte Publikationen",
+    "statLine": "258 Publikationen (1971–2023)",
+    "highlightsHeading": "Ausgewählte Publikationen",
     "items": {
       "p234": {
         "number": "#234",
         "title": "Rating of Underground Power Cables with Boundary Temperature Restrictions",
-        "journal": "IEEE Transactions on Power Delivery, Aug 2018, S. 1895\u20131902",
-
+        "journal": "IEEE Transactions on Power Delivery, Aug 2018, S. 1895–1902",
         "badge": "IEEE PES Prize Paper 2019",
         "url": "https://ieeexplore.ieee.org/document/8309265"
       },
       "p251": {
         "number": "#251",
         "title": "A new method for analyzing complex cable arrangements",
-        "journal": "IEEE Transactions on Power Delivery, Bd. 37, Juni 2022, S. 1608\u20131616",
-
+        "journal": "IEEE Transactions on Power Delivery, Bd. 37, Juni 2022, S. 1608–1616",
         "badge": "",
         "url": "https://ieeexplore.ieee.org/document/9543595"
       },
@@ -225,7 +214,6 @@
         "number": "#248",
         "title": "Transient Thermal Response of Power Cables with temperature-dependent losses",
         "journal": "IEEE Transactions on Power Delivery, Sept 2020",
-
         "badge": "",
         "url": "https://ieeexplore.ieee.org/document/9098049"
       },
@@ -233,16 +221,14 @@
         "number": "#253",
         "title": "Fundamentals of the thermal analysis of complex arrangements of underground heat sources",
         "journal": "Energies, 2021 (Open Access)",
-
         "badge": "",
         "url": "https://doi.org/10.3390/en14206813"
       },
       "p244": {
         "number": "#244",
-        "title": "Erdkabel f\u00fcr den Netzausbau",
+        "title": "Erdkabel für den Netzausbau",
         "titleTranslation": "",
-        "journal": "Buch \u2014 BoD-Verlag, 2019 (Co-Autor L.J. Jarass)",
-
+        "journal": "Buch — BoD-Verlag, 2019 (Co-Autor L.J. Jarass)",
         "badge": "",
         "url": ""
       },
@@ -250,7 +236,6 @@
         "number": "#235",
         "title": "Design aspects of HVDC cable installations",
         "journal": "IEEE Transactions on Power Delivery, Okt 2018",
-
         "badge": "",
         "url": "https://ieeexplore.ieee.org/document/8290718"
       },
@@ -258,8 +243,7 @@
         "number": "#32",
         "title": "Belastbarkeiten der Energiekabel",
         "titleTranslation": "",
-        "journal": "Buch \u2014 VDE-Verlag, 1985",
-
+        "journal": "Buch — VDE-Verlag, 1985",
         "badge": "",
         "url": ""
       },
@@ -267,12 +251,11 @@
         "number": "#27",
         "title": "Physical principles and calculation methods of moisture and heat transfer in cable trenches",
         "journal": "etz-Report 19, VDE-Verlag, 1984",
-
         "badge": "",
         "url": ""
       }
     },
-    "downloadPdf": "Vollst\u00e4ndige Publikationsliste herunterladen (PDF)",
+    "downloadPdf": "Vollständige Publikationsliste herunterladen (PDF)",
     "viewOnIeee": "Alle auf IEEE Xplore ansehen",
     "ieeeUrl": "https://ieeexplore.ieee.org/author/37276293400"
   },
@@ -305,5 +288,34 @@
         "description": "Intelligentes Monitoring mit prädiktiver Prognose für Kabelinfrastruktur. Echtzeit-Zustandsbewertung und proaktive Instandhaltungsplanung für kritische Anlagen."
       }
     }
+  },
+  "impressum": {
+    "title": "Impressum",
+    "subtitle": "Angaben gemäß § 5 TMG",
+    "contactHeading": "Angaben",
+    "representedBy": "Vertreten durch",
+    "contactLabel": "Kontakt",
+    "phone": "Telefon",
+    "emailLabel": "E-Mail",
+    "disclaimerHeading": "Haftungsausschluss",
+    "contentLiabilityHeading": "Haftung für Inhalte",
+    "contentLiabilityText": "Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.",
+    "linkLiabilityHeading": "Haftung für Links",
+    "linkLiabilityText": "Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen."
+  },
+  "book": {
+    "sectionLabel": "Buchpublikation",
+    "badge": "Fachbuch",
+    "title": "Erdkabel für den Netzausbau",
+    "subtitle": "BoD-Verlag, 2019",
+    "author1": "Prof. Dr.-Ing. habil. Heinrich Brakelmann",
+    "author2": "Prof. Dr. Lorenz J. Jarass",
+    "description": "Bis 2030 sind in Deutschland mehr als 9.000 km 'Stromautobahnen' geplant – Anfang 2019 war erst rund ein Achtel realisiert. Wegen des Widerstands gegen Freileitungen wurden Verkabelungen deutlich erleichtert. Wie kann dieser Netzausbau versorgungssicher, umweltfreundlich und kostengünstig realisiert werden? Inwieweit lassen sich durch Voll- oder Teilverkabelungen Trassen schneller genehmigen und die geplanten Investitionskosten von mehr als 50 Mrd. Euro verringern? Das Buch stellt die technischen, ökonomischen und ökologischen Parameter dieser Herausforderung allgemeinverständlich dar und zeigt innovative Lösungen – mit dem Schwerpunkt auf verbesserten Möglichkeiten der Teilverkabelung in kritischen Bereichen.",
+    "publisher": "BoD Books on Demand · ISBN 978-3-7481-2103-9 · 2019",
+    "cta": "Buch bestellen",
+    "stat1Value": "9.000 km",
+    "stat1Label": "Geplante Stromautobahnen bis 2030",
+    "stat2Value": "50 Mrd. €",
+    "stat2Label": "Geplante Investitionskosten"
   }
 }

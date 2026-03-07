@@ -10,9 +10,9 @@
   },
   "footer": {
     "tagline": "Expert consulting in high-voltage cable systems and offshore wind energy.",
-    "copyright": "© 2026 BCC Cable Consulting — Prof. Dr.-Ing. Heinrich Brakelmann. All rights reserved.",
+    "copyright": "© 2026 BCC Cable Consulting — Prof. Dr.-Ing. em. Heinrich Brakelmann. All rights reserved.",
     "contact": "Contact",
-    "email": "gerrit.brakelmann@gmail.com",
+    "email": "brakelmann.heinrich@gmail.com",
     "location": "Rheinberg, Germany"
   },
   "meta": {
@@ -40,7 +40,7 @@
   },
   "about": {
     "sectionLabel": "About",
-    "heading": "A Lifetime of Innovation in Cable Engineering",
+    "heading": "A Lifetime of Innovation in High-Voltage Cable Engineering",
     "lead": "Prof. Dr.-Ing. habil. Heinrich Brakelmann is one of the world's foremost authorities on high-voltage power cable systems — combining five decades of academic research with hands-on delivery of more than 110 major energy infrastructure projects.",
     "bio1": "He studied electrical engineering at RWTH Aachen (Diploma 1971) and completed his doctoral thesis on circuit breakers in 1973. He then joined Felten & Guilleaume Energietechnik AG in Cologne, leading an R&D unit focused on high-power cable technology — a role that grounded his theoretical expertise in large-scale industrial practice.",
     "bio2": "In 1977, he joined the University of Duisburg as chief engineer, earned his habilitation in 1985, was appointed apl. professor in 1992, and became full professor in 1994. At the Institute for Energy Transport and Storage (IW/ETS), he shaped the discipline over two decades. Now Professor emeritus, he continues to publish and consult at the frontier of the field.",
@@ -69,32 +69,23 @@
     "sectionLabel": "Projects",
     "heading": "110+ Projects Delivered",
     "subheading": "A selection of representative engagements across offshore and onshore cable systems.",
-    "filterAll": "All",
-    "filterOffshore": "Offshore",
-    "filterOnshore": "Onshore",
-    "emptyState": "No projects in this category.",
     "confidentialityNote": "Project details available upon request — client confidentiality applies.",
     "keyTech": "Key Technology",
     "items": {
-      "northSeaOffshore": {
-        "title": "North Sea Offshore Wind Farm, 2019",
-        "description": "End-to-end inpark grid layout for a 400 MW offshore wind farm in the North Sea. Included cable routing, cross-section selection, and connection to the offshore substation.",
-        "tech": "Inpark Grid Layout & Cable Sizing"
+      "selfShieldingHV": {
+        "title": "Self-Shielding HV Cables — IES Cable Development",
+        "description": "Extreme magnetic field requirements near cables necessitated a new approach. Following a BCC proposal, cable manufacturer nkt cables (Cologne) developed the IES cable (Integrated Electromagnetic Shielding). The worldwide first 150-kV IES cable installation (3×500 mm² Cu, 200 MVA) was executed by TSO Liandon in Amsterdam. BCC conducted measurements and numerical validation — both matched closely, confirming the excellent shielding performance.",
+        "tech": "Integrated Electromagnetic Shielding"
       },
-      "onshoreHV": {
-        "title": "Inland HV Transmission Corridor, 2021",
-        "description": "Integration of a 220 kV underground cable system into an existing overhead transmission corridor. Detailed thermal analysis and system compatibility study.",
-        "tech": "HV Cable System Integration"
+      "rinikenSwitzerland": {
+        "title": "Riniken, Switzerland — 380 kV Underground Cable Section",
+        "description": "A 1.5 km section of a 40 km 380-kV overhead line route had been blocked by court objections for 20 years. Initial TSO and manufacturer studies concluded cabling was unfeasible. Three BCC studies on thermal, mechanical, constructional, operational, and electromagnetic aspects — incorporating modern 380-kV cables and new installation techniques — provided the technical basis for the Swiss Federal Court ruling. BCC continues to support the TSO through planning and permitting.",
+        "tech": "380 kV Underground Cable Integration"
       },
-      "submarineThermal": {
-        "title": "Deepwater Export Cable Study, 2018",
-        "description": "Thermal rating and transient load analysis for a 100 km submarine export cable connecting an offshore wind farm to the mainland grid.",
-        "tech": "Submarine Cable Thermal Analysis"
-      },
-      "magneticShielding": {
-        "title": "Urban Underground Cable Route, 2022",
-        "description": "EMF impact assessment and magnetic shielding design for a high-current cable route passing beneath a densely populated urban area.",
-        "tech": "Magnetic Shielding & EMF Analysis"
+      "hotSpotDistrictHeating": {
+        "title": "Hot-Spot in 380 kV Cable Trench with District Heating Pipes",
+        "description": "A 380-kV cable route required co-routing with 110-kV cables and two district heating pipes — a severe thermal challenge. BCC solved the problem through two measures: embedding the 380-kV cables in a specially developed high-conductivity concrete (initiated and supported by BCC with HeidelbergCement), and inserting a heat insulation plate between the cables and heating pipes. BCC executed time-dependent thermal analysis using a custom FEM tool adapted for nonlinear cable installations.",
+        "tech": "Thermal FEM Analysis & Special Concrete"
       }
     }
   },
@@ -134,7 +125,7 @@
     "successMessage": "Your message has been sent successfully. We will get back to you shortly.",
     "errorGeneric": "Something went wrong. Please try again or contact us directly via email.",
     "errorRateLimit": "Too many submissions. Please try again in an hour.",
-    "errorServiceDown": "Our email service is temporarily unavailable. Please contact us directly at gerrit.brakelmann@gmail.com."
+    "errorServiceDown": "Our email service is temporarily unavailable. Please contact us directly at brakelmann.heinrich@gmail.com."
   },
   "testimonials": {
     "sectionLabel": "Professional Network",
@@ -189,13 +180,13 @@
   },
   "publications": {
     "sectionLabel": "Publications & Awards",
-    "heading": "258 Publications (1971\u20132023)",
+    "heading": "258 Publications (1971–2023)",
     "subheading": "Five decades of research advancing the science of power cable engineering.",
     "awardsHeading": "Awards & Recognition",
     "awards": {
       "ieee": {
         "title": "IEEE PES Prize Paper Award 2019",
-        "description": "For publication #234: \"Rating of Underground Power Cables with Boundary Temperature Restrictions\" \u2014 IEEE Transactions on Power Delivery, Aug 2018, pp. 1895\u20131902"
+        "description": "For publication #234: \"Rating of Underground Power Cables with Boundary Temperature Restrictions\" — IEEE Transactions on Power Delivery, Aug 2018, pp. 1895–1902"
       },
       "etg": {
         "title": "ETG Award (VDE/ETG), 1982",
@@ -208,16 +199,14 @@
       "p234": {
         "number": "#234",
         "title": "Rating of Underground Power Cables with Boundary Temperature Restrictions",
-        "journal": "IEEE Transactions on Power Delivery, Aug 2018, pp. 1895\u20131902",
-
+        "journal": "IEEE Transactions on Power Delivery, Aug 2018, pp. 1895–1902",
         "badge": "IEEE PES Prize Paper 2019",
         "url": "https://ieeexplore.ieee.org/document/8309265"
       },
       "p251": {
         "number": "#251",
         "title": "A new method for analyzing complex cable arrangements",
-        "journal": "IEEE Transactions on Power Delivery, vol. 37, June 2022, pp. 1608\u20131616",
-
+        "journal": "IEEE Transactions on Power Delivery, vol. 37, June 2022, pp. 1608–1616",
         "badge": "",
         "url": "https://ieeexplore.ieee.org/document/9543595"
       },
@@ -225,7 +214,6 @@
         "number": "#248",
         "title": "Transient Thermal Response of Power Cables with temperature-dependent losses",
         "journal": "IEEE Transactions on Power Delivery, Sept 2020",
-
         "badge": "",
         "url": "https://ieeexplore.ieee.org/document/9098049"
       },
@@ -233,16 +221,14 @@
         "number": "#253",
         "title": "Fundamentals of the thermal analysis of complex arrangements of underground heat sources",
         "journal": "Energies, 2021 (Open Access)",
-
         "badge": "",
         "url": "https://doi.org/10.3390/en14206813"
       },
       "p244": {
         "number": "#244",
-        "title": "Erdkabel f\u00fcr den Netzausbau",
+        "title": "Erdkabel für den Netzausbau",
         "titleTranslation": "(Underground Cables for Grid Expansion)",
-        "journal": "Book \u2014 BoD-Verlag, 2019 (co-author L.J. Jarass)",
-
+        "journal": "Book — BoD-Verlag, 2019 (co-author L.J. Jarass)",
         "badge": "",
         "url": ""
       },
@@ -250,7 +236,6 @@
         "number": "#235",
         "title": "Design aspects of HVDC cable installations",
         "journal": "IEEE Transactions on Power Delivery, Oct 2018",
-
         "badge": "",
         "url": "https://ieeexplore.ieee.org/document/8290718"
       },
@@ -258,8 +243,7 @@
         "number": "#32",
         "title": "Belastbarkeiten der Energiekabel",
         "titleTranslation": "(Current Ratings of Power Cables)",
-        "journal": "Book \u2014 VDE-Verlag, 1985",
-
+        "journal": "Book — VDE-Verlag, 1985",
         "badge": "",
         "url": ""
       },
@@ -267,7 +251,6 @@
         "number": "#27",
         "title": "Physical principles and calculation methods of moisture and heat transfer in cable trenches",
         "journal": "etz-Report 19, VDE-Verlag, 1984",
-
         "badge": "",
         "url": ""
       }
@@ -305,5 +288,34 @@
         "description": "Intelligent monitoring with predictive forecasting for cable infrastructure. Real-time condition assessment and proactive maintenance planning for critical assets."
       }
     }
+  },
+  "impressum": {
+    "title": "Legal Notice",
+    "subtitle": "Information pursuant to § 5 TMG (German Telemedia Act)",
+    "contactHeading": "Details",
+    "representedBy": "Represented by",
+    "contactLabel": "Contact",
+    "phone": "Phone",
+    "emailLabel": "Email",
+    "disclaimerHeading": "Disclaimer",
+    "contentLiabilityHeading": "Liability for Content",
+    "contentLiabilityText": "The contents of our pages were created with the greatest care. However, we cannot guarantee the accuracy, completeness, or timeliness of the content. As a service provider, we are responsible for our own content on these pages in accordance with § 7 (1) TMG. According to §§ 8 to 10 TMG, however, we are not obligated as a service provider to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity. Obligations to remove or block the use of information under general law remain unaffected. However, liability in this regard is only possible from the time of knowledge of a specific infringement. Upon becoming aware of corresponding legal violations, we will remove this content immediately.",
+    "linkLiabilityHeading": "Liability for Links",
+    "linkLiabilityText": "Our offer contains links to external third-party websites, over whose content we have no influence. Therefore, we cannot accept any liability for this external content. The respective provider or operator of the pages is always responsible for the content of the linked pages. The linked pages were checked for possible legal violations at the time of linking. Illegal content was not recognizable at the time of linking. However, permanent content control of the linked pages is not reasonable without concrete evidence of a legal violation. Upon becoming aware of legal violations, we will remove such links immediately."
+  },
+  "book": {
+    "sectionLabel": "Book Publication",
+    "badge": "Technical Book",
+    "title": "Erdkabel für den Netzausbau",
+    "subtitle": "BoD-Verlag, 2019",
+    "author1": "Prof. Dr.-Ing. habil. Heinrich Brakelmann",
+    "author2": "Prof. Dr. Lorenz J. Jarass",
+    "description": "By 2030, Germany has planned more than 9,000 km of high-voltage grid corridors – yet by early 2019, only around one eighth had been realised. Public opposition to overhead lines has led to significantly relaxed regulations for underground cabling. How can this grid expansion be achieved reliably, sustainably, and cost-effectively? Can underground cabling – full or partial – speed up approvals and reduce the planned investment costs of over €50 billion? This book presents the technical, economic, and ecological parameters of this societal challenge in accessible terms, and proposes innovative solutions with a focus on partial cabling in critical sections.",
+    "publisher": "BoD Books on Demand · ISBN 978-3-7481-2103-9 · 2019",
+    "cta": "Order Book",
+    "stat1Value": "9,000 km",
+    "stat1Label": "Planned grid corridors by 2030",
+    "stat2Value": "€50 bn",
+    "stat2Label": "Planned investment costs"
   }
 }
