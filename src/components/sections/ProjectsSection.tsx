@@ -8,24 +8,9 @@ import { ProjectCard } from "@/components/sections/ProjectCard";
 import { useStaggerReveal } from "@/hooks/useScrollReveal";
 
 const PROJECTS = [
-  {
-    key: "selfShieldingHV" as const,
-    imageUrl:
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80",
-    imageAlt: "Close-up of electronic circuit board representing electromagnetic shielding technology",
-  },
-  {
-    key: "rinikenSwitzerland" as const,
-    imageUrl:
-      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
-    imageAlt: "Swiss Alps mountain landscape at sunrise representing the Riniken cable route",
-  },
-  {
-    key: "hotSpotDistrictHeating" as const,
-    imageUrl:
-      "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&q=80",
-    imageAlt: "High voltage transmission towers at sunset representing 380 kV cable infrastructure",
-  },
+  { key: "selfShieldingHV" as const },
+  { key: "rinikenSwitzerland" as const },
+  { key: "hotSpotDistrictHeating" as const },
 ] as const;
 
 export default function ProjectsSection() {
@@ -63,12 +48,11 @@ export default function ProjectsSection() {
           {PROJECTS.map((project, i) => (
             <div key={project.key} className={hasRevealed ? "reveal-visible" : "reveal-hidden"}>
               <ProjectCard
+                projectKey={project.key}
                 title={t(`items.${project.key}.title`)}
                 description={t(`items.${project.key}.description`)}
                 tech={t(`items.${project.key}.tech`)}
                 techLabel={t("keyTech")}
-                imageUrl={project.imageUrl}
-                imageAlt={project.imageAlt}
                 index={i}
               />
             </div>

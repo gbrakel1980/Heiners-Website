@@ -1,23 +1,23 @@
-import Image from "next/image";
 import { Card, CardTitle } from "@/components/ui/card";
+import { ProjectVisual } from "@/components/sections/ProjectVisual";
+
+type ProjectKey = "selfShieldingHV" | "rinikenSwitzerland" | "hotSpotDistrictHeating";
 
 interface ProjectCardProps {
+  projectKey: ProjectKey;
   title: string;
   description: string;
   tech: string;
   techLabel: string;
-  imageUrl: string;
-  imageAlt: string;
   index: number;
 }
 
 export function ProjectCard({
+  projectKey,
   title,
   description,
   tech,
   techLabel,
-  imageUrl,
-  imageAlt,
   index,
 }: ProjectCardProps) {
   const reversed = index % 2 === 1;
@@ -25,16 +25,10 @@ export function ProjectCard({
   return (
     <Card className="group overflow-hidden border-light-border bg-light-surface shadow-sm transition-all duration-300 hover:border-warm-accent/40 hover:shadow-lg">
       <div className={`flex flex-col md:flex-row ${reversed ? "md:flex-row-reverse" : ""}`}>
-        {/* Image */}
+
+        {/* Technical illustration panel */}
         <div className="relative h-56 w-full flex-shrink-0 overflow-hidden md:h-auto md:w-2/5">
-          <Image
-            src={imageUrl}
-            alt={imageAlt}
-            fill
-            className="object-cover transition-transform duration-500 group-hover:scale-105"
-            sizes="(max-width: 768px) 100vw, 40vw"
-          />
-          <div className={`absolute inset-0 ${reversed ? "bg-gradient-to-l" : "bg-gradient-to-r"} from-transparent via-transparent to-black/10`} />
+          <ProjectVisual projectKey={projectKey} />
         </div>
 
         {/* Content */}
