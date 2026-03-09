@@ -48,7 +48,6 @@ export default function ProjectsSection() {
           {PROJECTS.map((project, i) => (
             <div key={project.key} className={hasRevealed ? "reveal-visible" : "reveal-hidden"}>
               <ProjectCard
-                projectKey={project.key}
                 title={t(`items.${project.key}.title`)}
                 description={t(`items.${project.key}.description`)}
                 tech={t(`items.${project.key}.tech`)}
