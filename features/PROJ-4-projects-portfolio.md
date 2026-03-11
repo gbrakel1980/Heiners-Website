@@ -19,13 +19,8 @@
   - "40+ Offshore Wind Farm Projects" / "40+ Offshore-Windpark-Projekte"
   - "70+ Onshore Projects" / "70+ Onshore-Projekte"
   - "50+ Years of Expertise" / "50+ Jahre Expertise"
-- [ ] At least 4 representative project highlight cards covering:
-  - Offshore inpark grid layout for a major wind farm
-  - Onshore HV cable system integration
-  - Submarine cable thermal analysis
-  - Magnetic shielding implementation
+- [ ] 3 representative project highlight cards (intentionally reduced scope, filter tabs removed by design)
 - [ ] Each project card shows: project type badge, title, short description (2-3 sentences), key technology used
-- [ ] Filter tabs or toggle: "All / Offshore / Onshore" to filter visible cards
 - [ ] Section heading and all content bilingual (EN/DE via next-intl)
 - [ ] Section is responsive: 2-column grid on desktop, 1-column on mobile
 - [ ] Note displayed: "Project details available upon request / Projektdetails auf Anfrage" (client confidentiality)

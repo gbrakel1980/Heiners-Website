@@ -27,9 +27,16 @@ export function useScrollReveal<T extends HTMLElement>(
       return;
     }
 
+    // Fallback: force-reveal after 2s in case IntersectionObserver doesn't fire
+    const fallback = setTimeout(() => {
+      element.classList.remove("reveal-hidden");
+      element.classList.add("reveal-visible");
+    }, 2000);
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
+          clearTimeout(fallback);
           element.classList.remove("reveal-hidden");
           element.classList.add("reveal-visible");
           observer.unobserve(element);
@@ -39,7 +46,10 @@ export function useScrollReveal<T extends HTMLElement>(
     );
 
     observer.observe(element);
-    return () => observer.disconnect();
+    return () => {
+      clearTimeout(fallback);
+      observer.disconnect();
+    };
   }, [threshold, rootMargin]);
 
   return ref;
@@ -71,9 +81,18 @@ export function useStaggerReveal<T extends HTMLElement>(
       return;
     }
 
+    // Fallback: force-reveal after 2s in case IntersectionObserver doesn't fire
+    const fallback = setTimeout(() => {
+      container.querySelectorAll(".reveal-hidden").forEach((el) => {
+        el.classList.remove("reveal-hidden");
+        el.classList.add("reveal-visible");
+      });
+    }, 2000);
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
+          clearTimeout(fallback);
           const children = container.querySelectorAll(".reveal-hidden");
           children.forEach((child, index) => {
             (child as HTMLElement).style.transitionDelay = `${index * 0.1}s`;
@@ -90,7 +109,10 @@ export function useStaggerReveal<T extends HTMLElement>(
     );
 
     observer.observe(container);
-    return () => observer.disconnect();
+    return () => {
+      clearTimeout(fallback);
+      observer.disconnect();
+    };
   }, [threshold, rootMargin, onReveal]);
 
   return ref;

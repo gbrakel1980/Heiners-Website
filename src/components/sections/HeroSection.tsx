@@ -77,10 +77,9 @@ export default function HeroSection() {
         {/* CTA buttons */}
         <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
           <Button
-            variant="outline"
             size="lg"
             onClick={() => scrollTo("contact")}
-            className="border-white/30 bg-transparent px-8 text-base font-semibold text-white hover:bg-white/10 hover:text-white"
+            className="bg-accent px-8 text-base font-semibold text-primary hover:bg-accent/90 border-0"
           >
             {t("cta")}
           </Button>

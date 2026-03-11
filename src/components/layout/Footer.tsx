@@ -17,7 +17,8 @@ export function Footer() {
   const tNav = useTranslations("nav");
   const locale = useLocale();
 
-  const handleNavClick = (sectionId: string) => {
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+    e.preventDefault();
     document
       .getElementById(sectionId)
       ?.scrollIntoView({ behavior: "smooth" });
@@ -48,18 +49,19 @@ export function Footer() {
           {/* Column 2: Quick Nav Links */}
           <div className="md:col-span-3">
             <h3 className="mb-5 text-xs font-semibold uppercase tracking-[0.15em] text-light-text-muted">
-              Navigation
+              {t("navigationHeading")}
             </h3>
             <nav aria-label="Footer navigation">
               <ul className="flex flex-col gap-3">
                 {NAV_ITEMS.map((item) => (
                   <li key={item.key}>
-                    <button
-                      onClick={() => handleNavClick(item.key)}
+                    <a
+                      href={item.href}
+                      onClick={(e) => handleNavClick(e, item.key)}
                       className="text-sm text-light-text-body transition-colors duration-200 hover:text-warm-accent-dark"
                     >
                       {tNav(item.key)}
-                    </button>
+                    </a>
                   </li>
                 ))}
               </ul>
@@ -105,9 +107,9 @@ export function Footer() {
           <button
             onClick={scrollToTop}
             className="group flex items-center gap-2 text-xs text-light-text-muted transition-colors duration-200 hover:text-warm-accent-dark"
-            aria-label="Scroll to top"
+            aria-label={t("backToTop")}
           >
-            <span className="hidden sm:inline">Back to top</span>
+            <span className="hidden sm:inline">{t("backToTop")}</span>
             <div className="flex h-7 w-7 items-center justify-center rounded-md border border-light-border transition-all duration-200 group-hover:border-warm-accent/40 group-hover:bg-warm-accent/10">
               <ChevronUp className="h-3.5 w-3.5" />
             </div>

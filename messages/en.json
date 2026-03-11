@@ -6,14 +6,17 @@
     "testimonials": "Network",
     "publications": "Publications",
     "contact": "Contact",
-    "logoText": "BCC Cable Consulting"
+    "logoText": "BCC Cable Consulting",
+    "menuTitle": "Navigation Menu"
   },
   "footer": {
     "tagline": "Expert consulting in high-voltage cable systems and offshore wind energy.",
     "copyright": "© 2026 BCC Cable Consulting — Prof. Dr.-Ing. em. Heinrich Brakelmann. All rights reserved.",
     "contact": "Contact",
     "email": "brakelmann.heinrich@gmail.com",
-    "location": "Rheinberg, Germany"
+    "location": "Rheinberg, Germany",
+    "navigationHeading": "Navigation",
+    "backToTop": "Back to top"
   },
   "meta": {
     "title": "BCC Cable Consulting — Prof. Dr.-Ing. Heinrich Brakelmann",
@@ -176,7 +179,8 @@
       "uniDue": "University of Duisburg-Essen",
       "rwth": "RWTH Aachen University",
       "bmwi": "BMWi Netzplattform"
-    }
+    },
+    "scrollHint": "Swipe for more"
   },
   "publications": {
     "sectionLabel": "Publications & Awards",

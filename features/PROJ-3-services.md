@@ -14,14 +14,13 @@
 - As a German-speaking client, I want to read the services in German so that there is no language barrier
 
 ## Acceptance Criteria
-- [ ] Services section displays all BCC service areas as cards or grid items:
+- [ ] Services section displays all BCC service areas as cards or grid items (6 services — "Transmission Behavior Analysis" intentionally merged into Thermal Analysis):
   1. **High-Voltage Cable Systems** — construction, optimization, and system integration of HV cable systems
   2. **Offshore Wind Park Cabling** — inpark grid layout and connection to the transmission grid
-  3. **Thermal Analysis & Cable Rating** — transient and stationary current ratings, heating behavior of submarine cables
+  3. **Thermal Analysis & Cable Rating** — transient and stationary current ratings, heating behavior of submarine cables (includes transmission behavior analysis)
   4. **EMF & Magnetic Shielding** — electric, magnetic, and thermal fields; EMF problems and shielding measures
-  5. **Transmission Behavior Analysis** — transient and stationary behavior of cables and overhead lines
-  6. **Wind Park Cable Layout Optimization** — optimized cabling layout with respect to technology, economics, and reliability
-  7. **Monitoring & Forecasting Systems** — intelligent monitoring with predictive forecasting for cable infrastructure
+  5. **Wind Park Cable Layout Optimization** — optimized cabling layout with respect to technology, economics, and reliability
+  6. **Monitoring & Forecasting Systems** — intelligent monitoring with predictive forecasting for cable infrastructure
 - [ ] Each service card shows: icon or visual, title, 2-3 sentence description
 - [ ] Section heading and all content bilingual (EN/DE via next-intl)
 - [ ] Hover state on cards with subtle animation (elevation or border highlight)

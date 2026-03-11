@@ -131,7 +131,7 @@ export function Header() {
               side="right"
               className="w-72 bg-primary border-surface"
             >
-              <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
+              <SheetTitle className="sr-only">{t("menuTitle")}</SheetTitle>
               <nav
                 className="mt-8 flex flex-col gap-6"
                 aria-label="Mobile navigation"

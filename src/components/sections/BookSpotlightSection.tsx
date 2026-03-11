@@ -59,10 +59,11 @@ export default function BookSpotlightSection() {
       />
 
       <div className="relative mx-auto max-w-7xl px-4">
-        <div className="flex flex-col items-center gap-14 lg:flex-row lg:items-center lg:gap-20">
+        <div className="flex flex-col items-center gap-6 lg:flex-row lg:items-center lg:gap-20">
 
           {/* ── Book cover with 3-D tilt ── */}
-          <div className="group flex-shrink-0 lg:w-64 xl:w-72" style={{ perspective: "900px" }}>
+          {/* Mobile: order-2 (below title), Desktop: order-1 (left column) */}
+          <div className="order-2 lg:order-1 group flex-shrink-0 lg:w-64 xl:w-72" style={{ perspective: "900px" }}>
             {/* Layered glow shadows */}
             <div className="relative mx-auto w-52 lg:w-full">
               <div
@@ -98,14 +99,14 @@ export default function BookSpotlightSection() {
                   width={400}
                   height={566}
                   className="h-auto w-full"
-                  priority
                 />
               </div>
             </div>
           </div>
 
-          {/* ── Content ── */}
-          <div className="flex flex-1 flex-col text-center lg:text-left">
+          {/* ── Content (text only, no button) ── */}
+          {/* Mobile: order-1 (top), Desktop: order-2 (right column) */}
+          <div className="order-1 lg:order-2 flex flex-1 flex-col text-center lg:text-left">
 
             {/* Badge */}
             <div className="mb-5 flex justify-center lg:justify-start">
@@ -143,13 +144,13 @@ export default function BookSpotlightSection() {
               {t("description")}
             </p>
 
-            {/* Publisher */}
-            <p className="mb-8 text-[11px] font-medium uppercase tracking-wider text-white/30">
+            {/* Publisher — Desktop only (shown below book on mobile instead) */}
+            <p className="mb-8 hidden lg:block text-[11px] font-medium uppercase tracking-wider text-white/30">
               {t("publisher")}
             </p>
 
-            {/* CTA */}
-            <div className="flex justify-center lg:justify-start">
+            {/* CTA — Desktop only (hidden on mobile, shown after book cover instead) */}
+            <div className="hidden lg:flex lg:justify-start">
               <Button
                 asChild
                 size="lg"
@@ -164,6 +165,26 @@ export default function BookSpotlightSection() {
                 </a>
               </Button>
             </div>
+          </div>
+
+          {/* Publisher + CTA — Mobile only, order-3 (below book cover) */}
+          <div className="order-3 flex flex-col items-center gap-4 lg:hidden">
+            <p className="text-[11px] font-medium uppercase tracking-wider text-white/30">
+              {t("publisher")}
+            </p>
+            <Button
+              asChild
+              size="lg"
+              className="group/btn bg-warm-accent font-semibold text-primary shadow-lg shadow-warm-accent/25 transition-all hover:bg-warm-accent-dark hover:shadow-warm-accent/40"
+            >
+              <a href={BOOK_URL} target="_blank" rel="noopener noreferrer">
+                {t("cta")}
+                <ExternalLink
+                  className="ml-2 h-4 w-4 transition-transform duration-200 group-hover/btn:translate-x-0.5"
+                  aria-hidden="true"
+                />
+              </a>
+            </Button>
           </div>
         </div>
       </div>

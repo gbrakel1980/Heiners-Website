@@ -63,21 +63,30 @@ export default function TestimonialsSection() {
 
         {/* Collaboration cards -- horizontal scroll on mobile, grid on desktop */}
         <div className="relative">
-          {/* Mobile: horizontal scroll */}
-          <div className="flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide md:hidden">
-            {COLLABORATION_KEYS.map((key) => (
-              <div
-                key={key}
-                className="min-w-[280px] max-w-[320px] flex-shrink-0 snap-center"
-              >
-                <CollaborationCard
-                  organization={t(`items.${key}.organization`)}
-                  description={t(`items.${key}.description`)}
-                  type={t(`items.${key}.type`)}
-                  icon={COLLABORATION_ICONS[key]}
-                />
-              </div>
-            ))}
+          {/* Mobile: horizontal scroll with fade indicator */}
+          <div className="relative md:hidden">
+            <div className="flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide">
+              {COLLABORATION_KEYS.map((key) => (
+                <div
+                  key={key}
+                  className="min-w-[280px] max-w-[320px] flex-shrink-0 snap-center"
+                >
+                  <CollaborationCard
+                    organization={t(`items.${key}.organization`)}
+                    description={t(`items.${key}.description`)}
+                    type={t(`items.${key}.type`)}
+                    icon={COLLABORATION_ICONS[key]}
+                  />
+                </div>
+              ))}
+            </div>
+            {/* Right fade gradient to indicate more content */}
+            <div
+              className="pointer-events-none absolute right-0 top-0 bottom-4 w-16"
+              style={{ background: "linear-gradient(to right, transparent, #1e3a5f)" }}
+              aria-hidden="true"
+            />
+            <p className="mt-2 text-center text-xs text-white/40">{t("scrollHint")}</p>
           </div>
 
           {/* Desktop: flex layout with centered rows (4 top, 3 bottom centered) */}

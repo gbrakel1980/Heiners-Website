@@ -101,13 +101,9 @@
 
 **BUG-SITE-3: Only 6 of 7 services displayed (spec requires 7)**
 - **Severity:** Medium
-- **Description:** The acceptance criteria for PROJ-3 lists 7 service areas including "Transmission Behavior Analysis." The SERVICE_KEYS array in ServicesSection.tsx only contains 6 items (hvCables, offshore, thermal, emf, layout, monitoring). The "thermal" service has been renamed/merged to "Cable Analysis & Rating" and appears to cover both thermal analysis and transmission behavior, but the "Transmission Behavior Analysis" service listed in the AC is not present as a separate card.
-- **Steps to Reproduce:**
-  1. Open http://localhost:3000/en and scroll to Services
-  2. Count the service cards: 6 visible
-  3. Expected: 7 cards per acceptance criteria
-  4. Actual: 6 cards. "Transmission Behavior Analysis" is missing as a standalone service.
-- **Priority:** Fix before deployment or update acceptance criteria
+- **Status: ACCEPTED — By Design (2026-03-11)**
+- **Description:** The "Transmission Behavior Analysis" service was intentionally merged into the existing "Thermal Analysis & Cable Rating" service. Acceptance criteria updated accordingly in PROJ-3 spec.
+- **Resolution:** Spec updated to reflect 6 services as the correct implementation.
 
 ### 2.5 Projects Section (PROJ-4)
 
@@ -124,23 +120,15 @@
 
 **BUG-SITE-4: Only 3 project cards displayed (spec requires at least 4)**
 - **Severity:** Medium
-- **Description:** The acceptance criteria for PROJ-4 requires "At least 4 representative project highlight cards" covering offshore grid layout, onshore HV cable, submarine cable thermal analysis, and magnetic shielding. The PROJECTS array only contains 3 items: selfShieldingHV, rinikenSwitzerland, and hotSpotDistrictHeating. Missing: submarine cable thermal analysis and offshore inpark grid layout projects.
-- **Steps to Reproduce:**
-  1. Open http://localhost:3000/en and scroll to Projects
-  2. Count the project cards: 3 visible
-  3. Expected: at least 4 per acceptance criteria
-  4. Actual: 3 project cards
-- **Priority:** Fix before deployment or update acceptance criteria
+- **Status: ACCEPTED — By Design (2026-03-11)**
+- **Description:** 3 project cards is the intentional final scope. Acceptance criteria updated accordingly in PROJ-4 spec.
+- **Resolution:** Spec updated to reflect 3 project cards as the correct implementation.
 
 **BUG-SITE-5: Filter tabs removed but AC still requires them**
 - **Severity:** Medium
-- **Description:** The acceptance criteria for PROJ-4 requires "Filter tabs or toggle: All / Offshore / Onshore." The previous QA identified BUG-4 (High) where the filter tabs were broken. The filter tabs have since been completely removed from the implementation. The PROJECTS array no longer contains `category` fields. The AC should be updated if filtering was intentionally removed.
-- **Steps to Reproduce:**
-  1. Open http://localhost:3000/en and scroll to Projects
-  2. Look for filter tabs above project cards
-  3. Expected: "All / Offshore / Onshore" filter tabs
-  4. Actual: No filter tabs present
-- **Priority:** Update AC or re-implement filters
+- **Status: ACCEPTED — By Design (2026-03-11)**
+- **Description:** Filter tabs were intentionally removed. The cleaner design without filters was preferred over the broken filter tab implementation.
+- **Resolution:** Spec updated to remove filter tab requirement from PROJ-4 AC.
 
 ### 2.6 Testimonials / Professional Network Section (PROJ-6)
 
@@ -274,8 +262,9 @@
 
 ### BUG-SITE-12: Services section "Transmission Behavior Analysis" removed without acceptance criteria update
 - **Severity:** Medium
-- **Description:** The PROJ-3 spec requires 7 services, but the "transmission" service was removed from SERVICE_KEYS and the translation files. The "thermal" service was likely expanded to cover both thermal analysis and transmission behavior. The spec was never updated to reflect this change.
-- **Priority:** Update acceptance criteria or add the missing service
+- **Status: ACCEPTED — By Design (2026-03-11)**
+- **Description:** The "transmission" service was intentionally merged into "thermal." Spec updated in PROJ-3.
+- **Resolution:** PROJ-3 acceptance criteria updated to reflect 6 services.
 
 ---
 
@@ -350,11 +339,9 @@
 5. **BUG-PROJ5-001:** Production email configuration (Resend domain verification, from address update)
 6. **BUG-PROJ1-5:** i18n deep merge for nested fallback keys
 
-### Should Fix (spec alignment, currently 6 services / 3 projects vs. spec)
-7. **BUG-SITE-3 / BUG-SITE-12:** Only 6 services vs. 7 in spec
-8. **BUG-SITE-4:** Only 3 project cards vs. 4+ in spec
-9. **BUG-SITE-5:** Filter tabs removed but spec requires them
-10. **BUG-SITE-1:** Hero CTA buttons not visually differentiated
+### Should Fix
+7. **BUG-SITE-1:** Hero CTA buttons not visually differentiated
+8. ~~BUG-SITE-3/12, BUG-SITE-4, BUG-SITE-5~~ — ACCEPTED by product decision (specs updated)
 
 ### Verdict: **NOT READY FOR PRODUCTION**
 
