@@ -191,7 +191,7 @@ export default function PublicationsSection() {
         <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <Button
             asChild
-            className="w-full bg-warm-accent text-white font-semibold hover:bg-warm-accent-dark sm:w-auto"
+            className="w-full bg-warm-accent text-white font-semibold hover:bg-warm-accent-dark sm:w-auto whitespace-normal h-auto py-3 text-center"
             size="lg"
           >
             <a

@@ -29,7 +29,7 @@ export function SectionHeading({
         </span>
         <span className={`h-px w-8 ${lineColor}`} aria-hidden="true" />
       </div>
-      <h2 className={`font-display text-3xl font-bold md:text-4xl lg:text-5xl ${headingColor}`}>
+      <h2 className={`font-display text-xl font-bold sm:text-3xl md:text-4xl lg:text-5xl break-words ${headingColor}`}>
         {heading}
       </h2>
       {subheading && (

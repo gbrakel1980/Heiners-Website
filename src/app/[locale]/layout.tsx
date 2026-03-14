@@ -83,7 +83,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} className={`${dmSans.variable} ${outfit.variable}`}>
-      <body className="font-sans antialiased bg-primary text-white">
+      <body className="font-sans antialiased bg-primary text-white overflow-x-hidden">
         <NextIntlClientProvider messages={messages}>
           <Header />
           {children}

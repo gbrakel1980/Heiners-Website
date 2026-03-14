@@ -32,7 +32,7 @@ export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative flex min-h-screen flex-col items-center justify-center px-4 pt-16 md:pt-20 bg-primary"
+      className="relative flex min-h-screen flex-col items-center justify-center px-4 pt-32 md:pt-40 bg-primary"
       aria-label="Hero"
     >
       {/* Background image with dark overlay — bg-primary is the CSS fallback */}
@@ -53,19 +53,19 @@ export default function HeroSection() {
       )}
       {/* Content */}
       <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center text-center">
-        {/* Small label */}
-        <span className="mb-6 text-2xl font-semibold tracking-normal text-white">
-          Prof. Dr.-Ing. em. Heinrich Brakelmann
+        {/* Name — fits one line on iPhone */}
+        <span className="mb-1 text-sm font-semibold tracking-wide text-white/80 sm:text-base md:text-2xl">
+          {t("titleLine1")} {t("titleLine2")}
         </span>
 
-        {/* Main title — company name */}
-        <h1 className="font-display text-4xl font-bold uppercase leading-tight text-white md:text-5xl lg:text-6xl">
+        {/* Main title — fits one line on iPhone at text-2xl */}
+        <h1 className="font-display text-2xl font-bold uppercase leading-tight text-white sm:text-4xl md:text-5xl lg:text-6xl">
           <span className="text-accent">BCC </span>
           <span className="text-white">Cable Consulting</span>
         </h1>
 
         {/* Subtitle */}
-        <p className="mt-4 max-w-2xl text-lg text-accent/90 md:text-xl">
+        <p className="mt-4 max-w-2xl text-base text-accent/90 md:text-xl">
           {t("subtitle")}
         </p>
 
