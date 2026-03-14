@@ -61,7 +61,7 @@ export function Header() {
         {/* Logo — centered on mobile, left on desktop */}
         <a
           href={`/${locale}`}
-          className="absolute left-1/2 -translate-x-1/2 flex items-center md:static md:translate-x-0"
+          className="flex items-center mt-1"
           aria-label={t("logoText")}
         >
           <Image

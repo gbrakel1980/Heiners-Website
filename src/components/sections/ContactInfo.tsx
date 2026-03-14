@@ -20,7 +20,7 @@ function ContactItem({
       <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-accent/[0.08] ring-1 ring-accent/[0.12] transition-all duration-300 group-hover/item:bg-accent/[0.14] group-hover/item:ring-accent/[0.2]">
         <Icon className="h-[18px] w-[18px] text-accent/80" aria-hidden="true" />
       </div>
-      <div className="text-sm leading-relaxed">{children}</div>
+      <div className="min-w-0 text-sm leading-relaxed break-all">{children}</div>
     </div>
   );
 

@@ -48,7 +48,7 @@ export default function HeroSection() {
             onError={() => setBgError(true)}
           />
           {/* Dark gradient overlay for text readability */}
-          <div className="absolute inset-0 bg-gradient-to-b from-primary/75 via-primary/55 to-primary/80" />
+          <div className="absolute inset-0 bg-gradient-to-b from-primary/30 via-primary/15 to-primary/40" />
         </div>
       )}
       {/* Content */}
@@ -60,12 +60,11 @@ export default function HeroSection() {
 
         {/* Main title — fits one line on iPhone at text-2xl */}
         <h1 className="font-display text-2xl font-bold uppercase leading-tight text-white sm:text-4xl md:text-5xl lg:text-6xl">
-          <span className="text-accent">BCC </span>
-          <span className="text-white">Cable Consulting</span>
+          <span className="text-[#16194d]">BCC Cable Consulting</span>
         </h1>
 
         {/* Subtitle */}
-        <p className="mt-4 max-w-2xl text-base text-accent/90 md:text-xl">
+        <p className="mt-4 max-w-2xl text-base text-white md:text-xl">
           {t("subtitle")}
         </p>
 
@@ -79,7 +78,7 @@ export default function HeroSection() {
           <Button
             size="lg"
             onClick={() => scrollTo("contact")}
-            className="bg-accent px-8 text-base font-semibold text-primary hover:bg-accent/90 border-0"
+            className="bg-[#16194d] px-8 text-base font-semibold text-white hover:bg-[#16194d]/90 border-0"
           >
             {t("cta")}
           </Button>
